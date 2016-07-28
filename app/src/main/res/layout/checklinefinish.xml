@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="客戶資訊"
+            android:id="@+id/textView9"
+            android:layout_gravity="center_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="LINE ID: "
+                android:id="@+id/textView17" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/TFLine"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@+id/textView17"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/textView17"
+                android:layout_toEndOf="@+id/textView17" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="電話: "
+                android:id="@+id/textView18"
+                android:layout_below="@+id/textView17" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/TFPhone"
+                android:layout_alignBottom="@+id/textView18"
+                android:layout_below="@+id/TFLine"
+                android:layout_alignLeft="@+id/TFLine"
+                android:layout_alignStart="@+id/TFLine"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="上車地址: "
+                android:id="@+id/textView19"
+                android:layout_below="@+id/textView18" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/TFAddress"
+                android:layout_alignBottom="@+id/textView19"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/TFPhone"
+                android:layout_toRightOf="@+id/textView19"
+                android:layout_toEndOf="@+id/textView19" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="000000000"
+                android:id="@+id/TFId"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textView19" />
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="開始載客"
+            android:id="@+id/btnStart"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:onClick="onButtonClick" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="結束載客"
+            android:id="@+id/btnFinish"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:enabled="false"
+            android:onClick="onButtonClick" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="以line訊息聯絡客人"
+            android:id="@+id/btnOpenLine"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:onClick="onButtonClick" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消行程"
+        android:id="@+id/btnCancel"
+        android:layout_weight="1"
+        android:onClick="onButtonClick" />
+
+</LinearLayout>

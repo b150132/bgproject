@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="會員資訊"
+        android:id="@+id/textView9"
+        android:layout_gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="姓名: "
+            android:id="@+id/textView10" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/TFName"
+            android:layout_alignRight="@+id/TFPhone"
+            android:layout_alignEnd="@+id/TFPhone"
+            android:layout_toEndOf="@+id/textView15"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/textView11"
+            android:layout_alignLeft="@+id/TFEmail"
+            android:layout_alignStart="@+id/TFEmail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="生日: "
+            android:id="@+id/textView11"
+            android:layout_below="@+id/textView10" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/TFEmail"
+            android:layout_above="@+id/textView12"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/textView10"
+            android:layout_below="@+id/TFName"
+            android:layout_alignLeft="@+id/TFAddress"
+            android:layout_alignStart="@+id/TFAddress" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="帳號: "
+            android:id="@+id/textView12"
+            android:layout_below="@+id/textView11" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/TFUsername"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/textView13"
+            android:layout_toEndOf="@+id/textView12"
+            android:layout_below="@+id/TFEmail"
+            android:layout_alignLeft="@+id/TFEmail"
+            android:layout_alignStart="@+id/TFEmail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="密碼: "
+            android:id="@+id/textView13"
+            android:layout_below="@+id/textView12" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/TFPassword"
+            android:layout_alignRight="@+id/TFUsername"
+            android:layout_alignEnd="@+id/TFUsername"
+            android:layout_above="@+id/textView14"
+            android:layout_toEndOf="@+id/textView13"
+            android:layout_below="@+id/TFUsername"
+            android:layout_alignLeft="@+id/TFUsername"
+            android:layout_alignStart="@+id/TFUsername" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="地址: "
+            android:id="@+id/textView14"
+            android:layout_below="@+id/textView13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/TFAddress"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/textView15"
+            android:layout_below="@+id/TFPassword"
+            android:layout_alignLeft="@+id/TFFounder"
+            android:layout_alignStart="@+id/TFFounder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="職業別: "
+            android:id="@+id/textView15"
+            android:layout_below="@+id/textView14" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/TFJob"
+            android:text="xxxxxxxxxxx"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/textView15"
+            android:layout_toEndOf="@+id/textView17"
+            android:layout_alignBottom="@+id/textView15"
+            android:layout_alignLeft="@+id/TFLine"
+            android:layout_alignStart="@+id/TFLine" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="介紹人: "
+            android:id="@+id/textView16"
+            android:layout_below="@+id/textView15" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/TFFounder"
+            android:text="xxxxxxxx"
+            android:layout_alignRight="@+id/TFJob"
+            android:layout_alignEnd="@+id/TFJob"
+            android:layout_above="@+id/textView17"
+            android:layout_below="@+id/TFJob"
+            android:layout_alignLeft="@+id/TFLine"
+            android:layout_alignStart="@+id/TFLine" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="LINE ID: "
+            android:id="@+id/textView17"
+            android:layout_below="@+id/textView16" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/TFLine"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/textView17"
+            android:layout_below="@+id/TFFounder"
+            android:layout_alignLeft="@+id/TFPhone"
+            android:layout_alignStart="@+id/TFPhone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="電話: "
+            android:id="@+id/textView18"
+            android:layout_below="@+id/textView17" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/TFPhone"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/textView18"
+            android:layout_alignTop="@+id/textView18"
+            android:layout_toRightOf="@+id/textView20"
+            android:layout_toEndOf="@+id/textView20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="個人總現金: "
+            android:id="@+id/textView19"
+            android:layout_below="@+id/textView18"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/TFCount"
+            android:layout_alignRight="@+id/TFCarcount"
+            android:layout_alignEnd="@+id/TFCarcount"
+            android:layout_alignBottom="@+id/textView19"
+            android:layout_toEndOf="@+id/textView19"
+            android:layout_below="@+id/TFPhone"
+            android:layout_toRightOf="@+id/textView19" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="折扣現金: "
+            android:id="@+id/textView20"
+            android:layout_below="@+id/textView19"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/TFShopcount"
+            android:layout_alignParentEnd="true"
+            android:layout_toLeftOf="@+id/TFPhone"
+            android:layout_below="@+id/TFCount"
+            android:layout_toRightOf="@+id/textView20"
+            android:layout_toEndOf="@+id/textView20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="消費現金: "
+            android:id="@+id/txtTitle"
+            android:layout_below="@+id/textView20"
+            android:layout_alignRight="@+id/textView20"
+            android:layout_alignEnd="@+id/textView20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/TFCarcount"
+            android:layout_alignParentEnd="true"
+            android:layout_toLeftOf="@+id/TFPhone"
+            android:layout_alignTop="@+id/txtTitle"
+            android:layout_toRightOf="@+id/txtTitle"
+            android:layout_toEndOf="@+id/txtTitle" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/linearLayout2"
+            android:layout_below="@+id/TFId">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登出系統"
+                android:id="@+id/btnlogout"
+                android:onClick="onLogoutClick"
+                android:layout_alignTop="@+id/btngohome"
+                android:layout_alignLeft="@+id/TFPhone"
+                android:layout_alignStart="@+id/TFPhone" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="繼續登入"
+                android:id="@+id/btngohome"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/btnlogout"
+                android:layout_toEndOf="@+id/btnlogout"
+                android:onClick="onButtonClick" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="會員編號(重要!請牢記)"
+            android:id="@+id/textView22"
+            android:layout_below="@+id/txtTitle"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="000000000"
+            android:id="@+id/TFId"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textView22" />
+
+    </RelativeLayout>
+</LinearLayout>

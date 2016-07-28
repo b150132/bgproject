@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="其餘服務"
+        android:id="@+id/textView20"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="1. 本公司網頁推廣服務"
+        android:id="@+id/bt1"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="2. 業務推廣服務"
+        android:id="@+id/bt2"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="3. 地方文化服務"
+        android:id="@+id/bt3"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4. 國內外旅遊推廣服務"
+        android:id="@+id/bt4"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+</LinearLayout>

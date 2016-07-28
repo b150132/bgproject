@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="車輛服務派遣"
+        android:id="@+id/textView20"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="1. 計程車(個人)"
+        android:id="@+id/bt1"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="2. 禮賓租賃車(車行)"
+        android:id="@+id/bt2"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="3. 轎式代駕(人員)"
+        android:id="@+id/bt3"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4. 九人箱型客車(個人,公司)"
+        android:id="@+id/bt4"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="5. 0.5和1.5小貨車(貨運公司)"
+        android:id="@+id/bt5"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="6. 機車外送服務(貨運公司)"
+        android:id="@+id/bt6"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="7. 殘障車服務(計程車)"
+        android:id="@+id/bt7"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="8. 消防救護車(私人公司)"
+        android:id="@+id/bt8"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="9. 拖吊車(國道,一般道路)"
+        android:id="@+id/bt9"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="10. 機車救援車(機車行)"
+        android:id="@+id/bt10"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="11. 貓狗接送"
+        android:id="@+id/bt11"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="12. 貓狗葬儀社"
+        android:id="@+id/bt12"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+</LinearLayout>

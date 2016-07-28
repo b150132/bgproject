@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="上傳商鋪照片"
+            android:id="@+id/btnShopUpload"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:onClick="onButtonClick" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="小額消費扣除"
+            android:id="@+id/btnShopUseCount"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:onClick="onButtonClick" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查詢商品銷售狀況"
+            android:id="@+id/btnShopShowSale"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:onClick="onButtonClick" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="搜尋附近客人"
+            android:id="@+id/btnShopGuestMap"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:onClick="onButtonClick" />
+
+
+</LinearLayout>

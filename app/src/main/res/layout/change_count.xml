@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="0">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="輸入會員編號"
+        android:id="@+id/tv22"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/etMemberNum"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:hint="請輸入自己的會員編號"
+        android:focusable="false"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="會員點數"
+        android:id="@+id/textView23"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="轉換: "
+            android:id="@+id/textView32" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerCounttype"
+            android:entries="@array/counttype_list"
+            android:spinnerMode="dropdown"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true"
+            android:layout_weight="20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="至"
+            android:id="@+id/textView33" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerCounttype2"
+            android:entries="@array/counttype_list2"
+            android:spinnerMode="dropdown"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true"
+            android:layout_weight="20" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="兌換範例:\n1.個人總現金換折扣現金:  兌換1000點,加送折扣現金200\n2.個人總現金換消費現金:  兌換1000點,加送折扣現金200\n3.消費與折扣現金互換:  收取個人總現金200點\n4.點數換錢請於首頁聯絡客服!"
+        android:id="@+id/textView24"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="2" />
+    <EditText android:layout_height="wrap_content" android:id="@+id/editText_result"
+        android:layout_width="match_parent" android:hint="請輸入點數" android:focusable="true"
+        android:layout_weight="1">
+    </EditText>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="8"
+        android:layout_margin="3sp">
+        <TableRow android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button android:text="1" android:id="@+id/button_num1"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <Button android:text="2" android:id="@+id/button_num2"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <Button android:text="3" android:id="@+id/button_num3"
+                android:layout_height="match_parent" android:layout_width="match_parent"
+                android:layout_weight="1" />
+        </TableRow>
+        <TableRow android:layout_weight="1">
+            <Button android:text="4" android:id="@+id/button_num4"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <Button android:text="5" android:id="@+id/button_num5"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <Button android:text="6" android:id="@+id/button_num6"
+                android:layout_height="match_parent" android:layout_width="match_parent"
+                android:layout_weight="1" />
+        </TableRow>
+        <TableRow android:layout_weight="1">
+            <Button android:text="7" android:id="@+id/button_num7"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <Button android:text="8" android:id="@+id/button_num8"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <Button android:text="9" android:id="@+id/button_num9"
+                android:layout_height="match_parent" android:layout_width="match_parent"
+                android:layout_weight="1" />
+        </TableRow>
+        <!--<TableRow>-->
+            <!--<Button android:text="+" android:id="@+id/button_plus"-->
+                <!--android:layout_width="match_parent" android:layout_height="wrap_content" />-->
+            <!--<Button android:text="-" android:id="@+id/button_sub"-->
+                <!--android:layout_width="match_parent" android:layout_height="wrap_content" />-->
+            <!--<Button android:text="=" android:id="@+id/button_amount"-->
+                <!--android:layout_height="wrap_content" android:layout_width="match_parent" />-->
+        <!--</TableRow>-->
+        <TableRow android:layout_weight="1">
+            <Button android:text="0" android:id="@+id/button_num0"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <Button android:text="C" android:id="@+id/button_c"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:onClick="onButtonClick"
+                android:layout_weight="1" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="確認"
+        android:id="@+id/btOK"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onButtonClick"
+        android:layout_weight="1" />
+</LinearLayout>

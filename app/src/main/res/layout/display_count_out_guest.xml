@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="須加購點數之客戶名單"
+        android:id="@+id/txtTitle"
+        android:layout_gravity="center_horizontal" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="430sp"
+        android:id="@+id/user_list"></TableLayout>
+
+</LinearLayout>

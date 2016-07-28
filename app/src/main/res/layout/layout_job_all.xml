@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="本公司提供之工作列表"
+        android:id="@+id/textView20"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="注意: 您即將進入所選職業的排班, 為您配對客戶, 請點選分類, 開始您的排班, 排班經確認會開始配對並扣除您的點數, 請謹慎點選, 勿隨意取消"
+        android:id="@+id/textView31" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="1. 車輛服務排班"
+        android:id="@+id/bt1"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="2. 人員服務排班"
+        android:id="@+id/bt2"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onButtonClick"
+        android:enabled="false"
+        />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="3. 收購服務排班"
+        android:id="@+id/bt3"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onButtonClick"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4. 其餘服務排班"
+        android:id="@+id/bt4"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onButtonClick"
+        android:enabled="false"/>
+
+</LinearLayout>

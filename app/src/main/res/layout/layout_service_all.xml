@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="目前提供服務"
+        android:id="@+id/textView20"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="注意: 本公司APP提供下列服務供您選擇, 請點選分類, 獲得您的服務, 服務一經確認後將會消耗您的點數, 請謹慎點選, 勿隨意取消"
+        android:id="@+id/textView30" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="1. 車輛服務派遣"
+        android:id="@+id/bt1"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="2. 人員服務派遣"
+        android:id="@+id/bt2"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onButtonClick"
+        />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="3. 收購服務"
+        android:id="@+id/bt3"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4. 其餘服務"
+        android:id="@+id/bt4"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onButtonClick" />
+
+</LinearLayout>

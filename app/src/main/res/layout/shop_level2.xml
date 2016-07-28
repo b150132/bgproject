@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"  >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+        android:id="@+id/imgTitle"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:scaleType="fitStart"
+        android:layout_gravity="center"
+            android:src="@drawable/buy_1_0"
+            android:onClick="onClick" />
+
+        <ImageButton
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:id="@+id/btnback"
+            android:src="@drawable/undo"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="10sp"
+            android:onClick="onButtonClick"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="3sp" />
+    </RelativeLayout>
+
+    <com.lytech.rainsilk.webviewapp.MyScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+
+
+
+            <!--<include-->
+                <!--android:id="@+id/buy"-->
+                <!--layout="@layout/buy_check" />-->
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <TableRow android:layout_weight="5">
+                    <ImageView
+                        android:layout_width="380sp"
+                        android:layout_height="250sp"
+                        android:id="@+id/imv3"
+                        android:src="@drawable/buy_1_2"
+                        android:layout_weight="1" />
+
+                </TableRow>
+                <TableRow android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="招牌排骨"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/abc_text_size_body_1_material" />
+                </TableRow>
+                <TableRow android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/tvcost1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="90元"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_horizontal" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="軟嫩而清香 主廚20年經驗精選品質最好、最健康的大排，經過老師傅垂打工法，肉質軟而富有彈性，搭配二十餘種中藥調製而成的獨家配方，排骨香氣撲鼻 而不油膩，深獲大眾好評，是本店的招牌商品"
+                        android:id="@+id/textView29" />
+                </TableRow>
+                <TableRow android:layout_weight="1">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imgbtnBuynow"
+                        android:src="@drawable/backtolist"
+                        android:adjustViewBounds="false"
+                        android:scaleType="fitCenter"
+                        android:background="@android:color/transparent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:onClick="onButtonClick"
+                        android:layout_gravity="center" />
+                </TableRow>
+            </TableLayout>
+
+
+        </LinearLayout>
+    </com.lytech.rainsilk.webviewapp.MyScrollView>
+
+</LinearLayout>

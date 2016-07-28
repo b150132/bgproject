@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"  >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+        android:id="@+id/imgTitle"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+            android:src="@drawable/topshoplevel1title"
+            android:onClick="onClick" />
+
+        <ImageButton
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:id="@+id/btnback"
+            android:src="@drawable/undo"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="10sp"
+            android:onClick="onButtonClick"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="3sp" />
+    </RelativeLayout>
+
+    <com.lytech.rainsilk.webviewapp.MyScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+
+
+
+            <!--<include-->
+                <!--android:id="@+id/buy"-->
+                <!--layout="@layout/buy_check" />-->
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <TableRow>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="190sp"
+                        android:id="@+id/imv3"
+                        android:src="@drawable/topshop1_1"
+                        android:layout_weight="1"
+                        android:onClick="onButtonClick" />
+
+                </TableRow>
+                <TableRow>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="230sp"
+                        android:id="@+id/imageView"
+                        android:src="@drawable/topshop1_2"
+                        android:layout_weight="1"
+                        android:onClick="onButtonClick" />
+                </TableRow>
+                <TableRow>
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imgbtnBuynow"
+                        android:src="@drawable/buynow"
+                        android:adjustViewBounds="false"
+                        android:scaleType="fitCenter"
+                        android:background="@android:color/transparent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:onClick="onButtonClick"
+                        android:layout_gravity="center" />
+                </TableRow>
+            </TableLayout>
+
+
+        </LinearLayout>
+    </com.lytech.rainsilk.webviewapp.MyScrollView>
+
+</LinearLayout>

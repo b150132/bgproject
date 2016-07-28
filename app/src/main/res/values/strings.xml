@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">宅商王</string>
+
+    <string name="hello_world">竭誠歡迎您加入宅商王會員!</string>
+    <string name="action_settings">Settings</string>
+    <string name="ok">進行確認</string>
+    <string name="hi">您輸入的為</string>
+    <string name="submit">送出跑馬燈文字</string>
+    <string name="select_buytype_dropdown">所有分類</string>
+    <string-array name="buytype_list">
+        <item>生活用品</item>
+        <item>美食</item>
+        <item>咖啡館</item>
+        <item>服飾</item>
+        <item>貨運</item>
+    </string-array>
+
+    <string-array name="mintype_list">
+        <item>3分鐘</item>
+        <item>6分鐘</item>
+        <item>9分鐘</item>
+    </string-array>
+    <!--中正區、大同區、中山區、松山區、大安區、萬華區、信義區、士林區、北投區、內湖區、南港區、文山區-->
+    <!--板橋區、新莊區、中和區、永和區、土城區、樹林區、三峽區、鶯歌區、三重區、蘆洲區、五股區、泰山區、林口區-->
+    <string-array name="regiontype_list">
+        <item>台北市</item>
+        <item>基隆市</item>
+        <item>板橋區</item>
+        <item>三重區</item>
+        <item>樹林區</item>
+        <item>三峽區</item>
+        <item>鶯歌區</item>
+        <item>蘆洲區</item>
+        <item>五股區</item>
+        <item>泰山區</item>
+        <item>林口區</item>
+        <item>新莊區</item>
+        <item>中和區</item>
+        <item>永和區</item>
+        <item>土城區</item>
+        <item>淡水區</item>
+        <item>士林區</item>
+        <item>中正區</item>
+        <item>北投區</item>
+        <item>大安區</item>
+        <item>大同區</item>
+        <item>中山區</item>
+        <item>松山區</item>
+        <item>萬華區</item>
+        <item>信義區</item>
+        <item>士林區</item>
+        <item>內湖區</item>
+        <item>南港區</item>
+        <item>文山區</item>
+    </string-array>
+    <string-array name="shopnametype_list">
+        <item>e-圓排骨</item>
+        <item>momo購物</item>
+        <item>cc食品</item>
+    </string-array>
+    <!--職業別 	醫藥 軍警 公教 工 商 家管 自由業 服務業 學生 農林漁牧業 已退休 待業中 -->
+    <string-array name="jobtype_list">
+        <item>業務</item>
+        <item>招集人</item>
+        <item>司機</item>
+        <item>製造業</item>
+        <item>金融證卷保險業</item>
+        <item>資訊電腦業</item>
+        <item>補教教師</item>
+        <item>一般教師</item>
+        <item>家庭主婦</item>
+        <item>餐飲業</item>
+        <item>旅遊業</item>
+        <item>大眾傳播廣告業</item>
+        <item>軍公教</item>
+        <item>工</item>
+        <item>商</item>
+        <item>自由業</item>
+        <item>服務業</item>
+        <item>學生</item>
+        <item>農林漁牧</item>
+        <item>已退休</item>
+        <item>待業</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="counttype_list">
+        <item>個人總現金</item>
+        <item>消費現金</item>
+        <item>折扣現金</item>
+    </string-array>
+    <string-array name="counttype_list2">
+        <item>消費現金</item>
+        <item>折扣現金</item>
+    </string-array>
+
+    <string name="buytype_select">選擇的分類：</string>
+
+    <string name="emptyString" />
+
+    <string name="title_activity_maps">Map</string>
+    <string name="title_update_location">記事儲存的位置</string>
+    <string name="message_update_location">更新或清除儲存的位置資訊?</string>
+    <string name="update">更新</string>
+    <string name="clear">清除</string>
+
+    <string name="title_current_location">目前位置</string>
+    <string name="message_current_location">是否儲存目前位置?</string>
+
+    <string name="google_play_service_missing">裝置沒有安裝Google Play服務</string>
+
+</resources>

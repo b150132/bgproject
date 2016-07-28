@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"  >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+        android:id="@+id/imageNifan"
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:scaleType="fitStart"
+        android:layout_gravity="center"
+        android:src="@drawable/shop2_01" />
+
+        <ImageButton
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:id="@+id/btnback"
+            android:src="@drawable/undo"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="10sp"
+            android:onClick="onButtonClick"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="3sp" />
+    </RelativeLayout>
+
+    <com.lytech.rainsilk.webviewapp.MyScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+
+
+
+            <include
+                android:id="@+id/buy"
+                layout="@layout/buy_check" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitStart"
+                android:layout_gravity="center"
+                android:src="@drawable/buy_info" />
+
+
+        </LinearLayout>
+    </com.lytech.rainsilk.webviewapp.MyScrollView>
+
+</LinearLayout>

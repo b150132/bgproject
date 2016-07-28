@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linLayMenu"
+        android:background="#ffffff"
+        android:layout_weight="1"
+
+        ><![CDATA[
+
+            />
+
+
+
+            ]]>
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgbtnHome"
+            android:src="@drawable/menu1"
+            android:onClick="onButtonClick"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgbtnBuy"
+            android:src="@drawable/menu2"
+            android:onClick="onButtonClick"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgbtnService"
+            android:src="@drawable/menu3"
+            android:onClick="onButtonClick"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgbtnJob"
+            android:src="@drawable/menu4"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="onButtonClick" />
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgbtnCount"
+            android:src="@drawable/menu66"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="onButtonClick" />
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgbtnSystem"
+            android:src="@drawable/menu5"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="onButtonClick" />
+
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgbtnCService"
+            android:src="@drawable/menu7"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="onButtonClick" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自行移轉點數"
+            android:id="@+id/btnMovecount"
+            android:layout_gravity="center_vertical"
+            android:onClick="onButtonClick" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="發送跑馬燈訊息"
+            android:id="@+id/btnMarquee"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onButtonClick" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="服務專區"
+            android:id="@+id/buttonServiceList"
+            android:onClick="onButtonClick"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="false"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="掃QRcode獲得免費點數!"
+            android:id="@+id/btnscan"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onButtonClick" />
+
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/frmLayOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    </FrameLayout>>
+</LinearLayout>

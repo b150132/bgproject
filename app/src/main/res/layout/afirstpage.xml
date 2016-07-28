@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    android:id="@+id/LayoutAll"
+    >
+
+    <ScrollView
+           android:layout_height="fill_parent"
+           android:layout_width="fill_parent"
+        android:fillViewport="true"
+           >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:id="@+id/linLayScreen"
+        android:background="@android:color/transparent"
+        android:fillViewport="true"
+        android:weightSum="13">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/linLayMenu"
+            android:background="#ffffff"
+            android:visibility="gone"
+            ><![CDATA[
+
+            />
+
+
+
+            ]]>
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButtonHome"
+                android:src="@drawable/menu1"
+                android:onClick="onButtonClick"
+                android:scaleType="centerInside"
+                android:background="@android:color/transparent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgbtnService"
+                android:src="@drawable/menu3"
+                android:onClick="onButtonClick"
+                android:scaleType="centerInside"
+                android:background="@android:color/transparent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgbtnJoblist"
+                android:src="@drawable/menu4"
+                android:onClick="onButtonClick"
+                android:scaleType="centerInside"
+                android:background="@android:color/transparent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgbtnBuy"
+                android:src="@drawable/menu2"
+                android:scaleType="centerInside"
+                android:background="@android:color/transparent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:onClick="onButtonClick" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linLayDisplay"
+            android:background="@android:color/transparent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@android:color/transparent"
+                android:paddingLeft="16sp"
+                android:paddingRight="16sp"
+                android:paddingTop="16sp"
+                android:paddingBottom="16sp"
+                >
+
+                <TableRow
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="10">
+
+                    <ImageButton
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:id="@+id/imageButtonMenu"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:onClick="onButtonClick"
+                        android:layout_weight="1"
+                        android:src="@drawable/menu"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="5sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/textView13"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:layout_marginLeft="30sp"
+                        android:text="宅商王"
+                        android:textColor="#fffef9f9" />
+
+                    <RelativeLayout
+                        android:layout_width="150sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50sp"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="區域選擇:"
+                            android:id="@+id/txtpart"
+                            android:layout_toLeftOf="@+id/spinnerJobtype"
+                            android:layout_centerVertical="true"
+                            android:textColor="#fff2fdf6" />
+
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinnerJobtype"
+                            android:entries="@array/regiontype_list"
+                            android:spinnerMode="dropdown"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="right"
+                            android:layout_centerVertical="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textViewBuyType"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="left"
+                            android:layout_centerVertical="true"
+                            android:textColor="#fffaf6ff" />
+
+                    </RelativeLayout>
+
+
+                </TableRow>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/tv_ouput"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20sp"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:text="@string/hello_world"
+                    android:layout_gravity="center_horizontal" />
+
+                <ScrollView
+                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent"
+                    >
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="16sp"
+                            android:paddingTop="16sp"
+                            android:paddingLeft="16sp"
+                            android:paddingRight="16sp">
+
+
+                            <ImageButton
+                                android:layout_width="250sp"
+                                android:layout_height="200sp"
+                                android:id="@+id/imageButton"
+                                android:src="@drawable/af11"
+                                android:onClick="onButtonClick"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerInside"
+                                android:adjustViewBounds="false" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="《宅商王》X 租賃商店"
+                            android:id="@+id/textView11"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_gravity="center"
+                            android:textColor="#ffffffff" />
+
+                        <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="16sp"
+                            android:paddingTop="16sp"
+                            android:paddingLeft="16sp"
+                            android:paddingRight="16sp">
+
+
+                            <ImageButton
+                                android:layout_width="250sp"
+                                android:layout_height="200sp"
+                                android:id="@+id/imageButton2"
+                                android:src="@drawable/af22"
+                                android:onClick="onButtonClick"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerInside"
+                                android:adjustViewBounds="false" />
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="《宅商王》X 免費合作折扣商家"
+                            android:id="@+id/textView12"
+                            android:layout_gravity="center"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="#ffffffff" />
+
+                        <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="16sp"
+                            android:paddingTop="16sp"
+                            android:paddingLeft="16sp"
+                            android:paddingRight="16sp">
+
+
+                            <ImageButton
+                                android:layout_width="250sp"
+                                android:layout_height="200sp"
+                                android:id="@+id/imageButton3"
+                                android:src="@drawable/af33"
+                                android:onClick="onButtonClick"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerInside"
+                                android:adjustViewBounds="false" />
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="《宅商王》X 實體市集"
+                            android:id="@+id/textView14"
+                            android:layout_gravity="center"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="#ffffffff" />
+
+                        <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="16sp"
+                            android:paddingTop="16sp"
+                            android:paddingLeft="16sp"
+                            android:paddingRight="16sp">
+
+
+                            <ImageButton
+                                android:layout_width="250sp"
+                                android:layout_height="200sp"
+                                android:id="@+id/imageButton4"
+                                android:src="@drawable/af44"
+                                android:onClick="onButtonClick"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerInside"
+                                android:adjustViewBounds="false" />
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="《宅商王》X 賣場及百貨"
+                            android:id="@+id/textView15"
+                            android:layout_gravity="center"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="#ffffffff" />
+
+                        <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="16sp"
+                            android:paddingTop="16sp"
+                            android:paddingLeft="16sp"
+                            android:paddingRight="16sp">
+
+
+                            <ImageButton
+                                android:layout_width="250sp"
+                                android:layout_height="200sp"
+                                android:id="@+id/imageButton5"
+                                android:src="@drawable/af55"
+                                android:onClick="onButtonClick"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerInside"
+                                android:adjustViewBounds="false" />
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="《宅商王》X 不定期活動"
+                            android:id="@+id/textView16"
+                            android:layout_gravity="center"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="#ffffffff" />
+                    </LinearLayout>>
+                </ScrollView>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/l1"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:fillViewport="true"
+                    android:layout_weight="1">
+
+                    <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/imageView6"
+                        android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                        android:scaleType="fitXY"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/l2"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center"
+
+                android:layout_weight="4">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:fillViewport="true"
+                    android:layout_weight="1">
+
+                    <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView21"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY" />
+
+                    <ImageButton
+                        android:layout_width="150sp"
+                        android:layout_height="50sp"
+                        android:id="@+id/imageButtonMore"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:layout_marginLeft="10sp"
+                        android:onClick="onButtonClick"
+                        android:layout_weight="1"
+                        android:layout_centerInParent="true" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>>
+</ScrollView>
+
+</LinearLayout>

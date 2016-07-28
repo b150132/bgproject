@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    android:paddingLeft="16sp"
+    android:paddingRight="16sp"
+    android:paddingTop="16sp"
+    android:paddingBottom="16sp"
+   >
+
+    <TableRow
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="精選合作商家"
+            android:id="@+id/textView13"
+            android:layout_gravity="left|center" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="130sp"
+            android:layout_height="match_parent"></LinearLayout>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="服務專區"
+            android:id="@+id/buttonServiceList"
+            android:onClick="onButtonClick"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="false"
+            android:layout_gravity="center" />
+
+    </TableRow>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="#ffffff"/>
+    <!--<Button-->
+        <!--style="?android:attr/buttonStyleSmall"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="影片選單"-->
+        <!--android:id="@+id/buttonVideoList"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:onClick="onButtonClick"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentTop="false" />-->
+
+    <ScrollView
+           android:layout_height="fill_parent"
+           android:layout_width="fill_parent"
+           >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="16sp"
+        android:paddingTop="16sp"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp">
+
+
+        <ImageButton
+        android:layout_width="250sp"
+        android:layout_height="250sp"
+        android:id="@+id/imageButton"
+        android:src="@drawable/c11"
+        android:onClick="onButtonClick"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="false" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="《龍羽科技》X MOMO 商城"
+        android:id="@+id/textView11"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:textColor="#ffffffff" />
+
+        <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="16sp"
+            android:paddingTop="16sp"
+            android:paddingLeft="16sp"
+            android:paddingRight="16sp">
+
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="250sp"
+                android:id="@+id/imageButton2"
+                android:src="@drawable/v11"
+                android:onClick="onButtonClick"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="false" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="《龍羽科技》X yahoo拍"
+            android:id="@+id/textView12"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="#ffffffff" />
+        </LinearLayout>>
+</ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></LinearLayout>
+
+</LinearLayout>

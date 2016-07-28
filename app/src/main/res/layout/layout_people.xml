@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="人員服務派遣"
+        android:id="@+id/textView20"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="1. 補習班家教服務"
+        android:id="@+id/bt1"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="2. 家內汽車洗車服務(地下室,路邊)"
+        android:id="@+id/bt2"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="3. 家內整潔服務(家庭清潔)"
+        android:id="@+id/bt3"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4. 鑰匙開門服務"
+        android:id="@+id/bt4"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="5. 水電服務(家庭服務)"
+        android:id="@+id/bt5"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="6. 油漆,水泥修補(家庭,公司)"
+        android:id="@+id/bt6"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="7. 保全服務(家庭,公司)"
+        android:id="@+id/bt7"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="8. 法律咨詢服務(個人,公司)"
+        android:id="@+id/bt8"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="9. 商品人員代購服務(人員)"
+        android:id="@+id/bt9"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="10. 瓦斯安全服務(機車服務)"
+        android:id="@+id/bt10"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="11. 餐飲代購服務(機車服務購買)"
+        android:id="@+id/bt11"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="12. 婚紗化妝(個人)"
+        android:id="@+id/bt12"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="13. 婚紗攝影"
+        android:id="@+id/bt13"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="14. 場地活動"
+        android:id="@+id/bt14"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="15. 場地辦桌"
+        android:id="@+id/bt15"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+
+</LinearLayout>

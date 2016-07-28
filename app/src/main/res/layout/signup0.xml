@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:id="@+id/linearLayout"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="碰觸圖示加入以下兩協會"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="加入協會可享有協會所屬之優惠"
+        android:id="@+id/textView28" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="4"
+        >
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="6">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_weight="3">
+
+                <ImageButton
+                    android:id="@+id/imgbtn06"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150sp"
+                    android:src="@drawable/n06"
+                    android:onClick="onButtonClick"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="false"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="協勤義警聯防協會"
+                    android:id="@+id/txt06"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal" />
+
+                <CheckBox
+                    android:id="@+id/check1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申請加入第一協會"
+                    android:checked="false" />
+                <CheckBox
+                    android:id="@+id/check2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申請加入第二協會"
+                    android:checked="false" />
+                <!--<ImageButton-->
+                            <!--android:id="@+id/imgbtn02"-->
+                            <!--android:layout_width="fill_parent"-->
+                            <!--android:layout_height="150sp"-->
+                            <!--android:src="@drawable/n02"-->
+                            <!--android:onClick="onButtonClick"-->
+                            <!--android:layout_gravity="center"-->
+                            <!--android:background="@android:color/transparent"-->
+                            <!--android:layout_centerVertical="true"-->
+                            <!--android:layout_centerHorizontal="true"-->
+                            <!--android:scaleType="fitXY"-->
+                            <!--android:adjustViewBounds="false"-->
+                    <!--android:layout_weight="1"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+                    <!--android:text="協會2"-->
+                    <!--android:id="@+id/txt02"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_gravity="center_horizontal" />-->
+
+                <!--<ImageButton-->
+                    <!--android:id="@+id/imgbtn03"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="150sp"-->
+                    <!--android:src="@drawable/n04"-->
+                    <!--android:onClick="onButtonClick"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:background="@android:color/transparent"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:adjustViewBounds="false"-->
+                    <!--android:layout_weight="1"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+                    <!--android:text="世界公評會"-->
+                    <!--android:id="@+id/txt03"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_gravity="center_horizontal" />-->
+
+                <!--<ImageButton-->
+                    <!--android:id="@+id/imgbtn04"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="150sp"-->
+                    <!--android:src="@drawable/n04"-->
+                    <!--android:onClick="onButtonClick"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:background="@android:color/transparent"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:adjustViewBounds="false"-->
+                    <!--android:layout_weight="1"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+                    <!--android:text="協會4"-->
+                    <!--android:id="@+id/txt04"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_gravity="center_horizontal" />-->
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                >
+
+                <ImageButton
+                    android:id="@+id/imgbtn05"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150sp"
+                    android:src="@drawable/n05"
+                    android:onClick="onButtonClick"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="false"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="協勤教育發展協會"
+                    android:id="@+id/txt05"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal" />
+
+                <CheckBox
+                    android:id="@+id/check3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申請加入第三協會"
+                    android:checked="false" />
+                <CheckBox
+                    android:id="@+id/check4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申請加入第四協會"
+                    android:checked="false" />
+
+                <!--<ImageButton-->
+                    <!--android:id="@+id/imgbtn01"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="150sp"-->
+                    <!--android:src="@drawable/n01"-->
+                    <!--android:onClick="onButtonClick"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:background="@android:color/transparent"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:adjustViewBounds="false"-->
+                    <!--android:layout_weight="1"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+                    <!--android:text="台北市公民生活協會"-->
+                    <!--android:id="@+id/txt01"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_gravity="center_horizontal" />-->
+
+                <!--<ImageButton-->
+                    <!--android:id="@+id/imgbtn07"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="150sp"-->
+                    <!--android:src="@drawable/n01"-->
+                    <!--android:onClick="onButtonClick"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:background="@android:color/transparent"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:adjustViewBounds="false"-->
+                    <!--android:layout_weight="1"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+                    <!--android:text="協會7"-->
+                    <!--android:id="@+id/txt07"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_gravity="center_horizontal" />-->
+
+                <!--<ImageButton-->
+                    <!--android:id="@+id/imgbtn08"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="150sp"-->
+                    <!--android:src="@drawable/n02"-->
+                    <!--android:onClick="onButtonClick"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:background="@android:color/transparent"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:adjustViewBounds="false"-->
+                    <!--android:layout_weight="1"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+                    <!--android:text="協會8"-->
+                    <!--android:id="@+id/txt08"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_gravity="center_horizontal" />-->
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_weight="5" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="隱私權條款"
+                android:id="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/tvCWJ"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:maxLines="200"
+                android:textColor="#ff090000"
+                android:text="\n龍羽生活有限公司（以下簡稱「本公司」）致力於保護使用者的隱私權。本條款告知使用者本公司收集了哪些資訊、收集的原因以及本公司如何使用這些資訊來為使用者提供服務。 \n  	\n1. 適用範圍 \n  	1.1. 使用者註冊或使用龍羽生活APP服務（以下簡稱「本服務」）時，根據APP要求所提供的個人資訊，本公司將根據本隱私權政策來保護。但經由本服務連結之網站或APP，各網站及各APP均有其專屬之隱私權政策，當使用者在這些網站進行活動時，有關個人資料之保護，將適用各該網站或各APP的隱私權政策，本公司不為其行為負責。 \n  	1.2. 使用者在使用本服務、參加APP活動或瀏覽本服務APP時，APP會自動接收紀錄使用者瀏覽器上的伺服器，包括但不限於IP位置、Cookie及使用者的點選記錄。 \n  	\n2. 個人資料的取得\n  	本隱私權保護政策只適用於本服務。本公司蒐集個人資訊的主要目的是為使用者提供個人化之服務，及相關之行銷、客戶管理、統計調查及分析、資訊與資料庫管理。本公司收集以下類型的使用者資訊： \n  	a. 在使用者註冊本服務帳號、使用本服務APP，以及參加本服務內之活動時，本公司會蒐集使用者主動提供的個人資料，包括但不限於姓名、Facebook帳號、電子郵件地址、電話、性別、居住地址、出生日期、婚姻狀態、學歷、職業、職稱、收入等資料。在使用者註冊本服務帳號並登入本服務後，本公司就能辨別使用者的身分。 \n  	b. 本服務會保留使用者所提供的上述資料，也將自動接收並記錄使用者APP上的資料，包括IP位址、使用時間、本服務Cookie中的資料、手機軟體和硬體屬性、瀏覽器以及使用者的點選記錄。 \n  	c. 本服務APP會自動與本公司之藍牙裝置beacon連線並取得、記錄使用者之所在位置，傳送至本公司之伺服器。\n  	d. 若使用者選擇使用facebook帳號登入本服務APP，本公司將取用該facebook帳號內的個人資料，包括但不限於公開個人檔案、姓名、生日、性別、朋友名單等資訊，本服務提供使用者向其facebook好友推薦本服務的功能，得在使用者的同意下代為發表動態訊息，作為本服務推廣之用，動態訊息內容由本公司指定。 \n  	\n3. 個人資料的利用\n  	為了提供使用者完整服務，如需要求使用者將個人資料提供予本公司之優良商業夥伴或合作廠商時，本公司會在服務相關頁面提供說明，使用者可以選擇是否接受這項特定服務。本公司將前述蒐集之個人資料用作以下用途：確認使用者的身份、個人化資訊及使用者接收的APP服務內容、與使用者進行連絡、提供本公司及關係企業或合作夥伴之相關服務及資訊、進行統計或研究、提供內部及外部客戶分析報告，以及其他隱私權保護政策規範之使用方式。 \n  	除非是為了向使用者提供使用者所要求的產品或服務、獲得使用者的授權，或有以下情形，否則本公司不會向任何其他人士或非關係企業揭露使用者的個人資料： \n  	a. 本公司向已簽署保密協議書之代表本公司執行業務或與本公司業務合作夥伴提供使用者的個人資料。上述對象可能會因相關產品或服務事宜與使用者進行溝通。但上述對象無權利分享這些資料。 \n  	b. 因司法或警察機關偵查犯罪之需要，為了遵守中華民國法令或政府機關的要求、取得或行使法律權利，或對訴訟上之請求提出防禦。 \n  	c. 本公司為了調查和防止非法活動、涉嫌詐欺、對人身安全有潛在威脅的狀況、對本服務條款的違反，或為了對上述情形採取應對措施，或法律另有規定，而有必要分享使用者的個人資料時。 \n  	d. 如果本公司被其他公司收購、合併或分割成獨立公司，本公司會將使用者的個人資料移轉給該公司。如果發生這種情況，本公司會在使用者的個人資料被移轉且將適用不同的隱私權政策前通知使用者。 \n  	\n4. 自我資料安全保護措施\n  	4.1. 請妥善保管任何個人資料，切勿將個人資料提供給任何第三人，以保障自身的權益。 \n  	4.2. 除了使用者主動登錄時提供的個人資料，使用者自願於網際網路上提供個人資料如電子郵件，姓名等形式資料提供，不在本服務隱私權保護政策的範圍之內。 \n  	\n5. 資訊安全 \n  	本公司將盡力以合理之技術及程序，保障所有個人資料之安全。 \n  	\n6. Cookie\n  	為了便利使用者，本服務App使用Cookie技術，以便於提供更適合使用者個人需要的服務，透過Cookie技術，本服務可以提供使用者客製化的APP服務內容並記錄使用者指定的偏好設定。 \n  	\n7. 使用者權利 \n  	使用者得向本公司請求如下事項，但因此致本公司無法繼續蒐集、利用使用者個人資訊或個人資訊有錯誤、欠缺時，本公司將無法提供完整服務予使用者，或導致使用者無法繼續使用本服務： \n  	a. 請求查詢或閱覽個人資訊。 \n  	b. 製給複製本。 \n  	c. 個人資料有變更、或發現個人資料不正確的時候，可以隨時在本服務App中請求補充或更正。 \n  	d. 請求停止蒐集、處理及利用個人資訊。 \n  	e. 請求刪除個人資訊。 \n  	\n8. 隱私權保護政策修訂 \n  	本公司可隨時修訂本政策。當本公司在個人資料的處理上有重大變更時，會將通知在本服務及本公司網站張貼告示。使用者應隨時注意相關修改或變更，若使用者於變更或修改後繼續使用本服務，視為使用者已接受及同意變更或修改之本政策，假如使用者不同意，請使用者立即停止使用本服務。 \n  	\n9. 問題和建議 \n  	如果您有任何問題或建議，請透過客服信箱b150132@yahoo.com.tw與本公司聯繫。 \n  	\n\n  	\n=========\n  	\n服務條款 \n  	\n使用者在使用龍羽生活有限公司（以下簡稱「本公司」）的服務或產品前，應完整閱讀本服務條款。請注意：本服務條款代表使用者與本公司之間成立一具法律約束力的約定。 \n  	\n本公司擁有並經營龍羽生活APP服務（以下簡稱「本服務」）。 \n  	\n當使用者開始使用本服務（如下文所定義），即表示使用者已閱讀、瞭解並同意接受本服務條款之所有內容。本公司有權於任何時間修改或變更本服務條款之內容，使用者應隨時注意該等修改或變更。使用者於任何修改或變更後繼續使用本服務時，視為使用者已閱讀、瞭解並同意接受該等修改或變更。 \n  	\n本服務包含使用者透過行動裝置下載的APP軟體（以下簡稱「本軟體」，行動裝置包括但不限於行動電話、PDA、平板電腦等裝置）、本軟體之所有附屬軟體（包括網頁軟體與用戶端/伺服器軟體）、以及相關之積點及兌換活動。 \n  	\n1. 授權使用／智慧財產權 \n  	\n1.1. 本公司依本服務條款授予使用者非獨佔的、個人使用的、不可轉讓的權利於電腦或行動裝置上安裝並使用本軟體，並連線至本公司伺服器進行本服務。 \n  	\n1.2. 本服務及本軟體僅能運行於Android 4.3(含)以上並配備BLE (Bluetooth Low Energy)之行動裝置。 \n  	\n1.3. 本公司僅授權您個人使用本服務。 請注意，下列人士不得使用本軟體： \n  	a. 18歲以下之未成年人； \n  	b. 使用者所在地之法律管轄機關依法認定之未成年人； \n  	c. 使用者所在地之法律管轄機關認定連線至本網站為非法者。 \n  	本公司無法一一查證本服務在各法律管轄區域的合法性，使用者應自行確認使用本服務為合法行為。 \n  	\n1.4. 本公司保留權利得在任何時候要求使用者提供年齡證明，以確保使用本服務者並非未成年人。此外，如果使用者無法提供符合本公司要求的年齡證明，或本公司懷疑使用者為未成年人，本公司保留權利得暫停或撤銷該使用者的帳號，並暫時或永久拒絕該使用者使用本服務。 \n  	\n1.5. 本公司與經本公司授權之法人或自然人擁有本軟體、本軟體之原始碼、結構與組織，及其著作權、商業機密、智慧財產權及其他相關權利。使用者不得： \n  	a. 複製、散發、出版、進行逆向工程、反編譯、分解、修改或翻譯本軟體，或試圖取得本軟體之原始碼，或透過其他方式製作本軟體之衍生產品； \n  	b. 出售、讓渡、再授權、轉讓、分配或者出租本軟體； \n  	c. 透過電腦網路或其他方式讓第三人取得本軟體； \n  	d. 以實體或電子方式將本軟體出口至任何國家； \n  	e. 以相關適用法律或規定所禁止的方式使用本軟體。 \n  	（以上所列各項行為統稱為「未授權行為」） \n  	因使用者從事上述「未授權行為」而產生或衍生之任何損失及費用，完全由使用者自行負擔。若使用者發覺任何人從事「未授權行為」，應立即通知本公司，並合理協助本公司根據使用者提供之資訊進行調查。 \n  	本公司與經本公司授權之法人或自然人保有上述所有權利（以上合稱「本公司權利」），並不授予使用者此等權利。 \n  	\n1.6. 本公司名稱「龍羽科技」、英文名稱「longyu」、本公司擁有之服務「龍羽生活」，以及其他本公司所使用之商標、服務商標、品牌名稱、活動名稱、產品名稱（以上合稱「本公司商標」）均為本公司、本公司公司成員或經本公司授權之法人或自然人之商標、服務商標或公司名稱及產品名稱。 \n  	上述單位對本公司商標保留所有權利。此外，本服務的其他內容，包括但不限於本軟體、圖案、圖片、視覺設計、照片、動畫、影片、音樂、聲音和文字（以上合稱「本服務內容」）之著作權及其他智慧財產權均為本公司、本公司之公司成員或經本公司授權之法人或自然人所有。使用者特此同意：使用本服務不代表使用者對本服務內容及/或本公司商標有任何權利。未經本公司事前書面同意，使用者不得在任何情況下使用本服務內容。 \n  	此外，使用者不得從事任何會傷害或可能會傷害本公司權利、本公司商標、本服務內容與本公司商譽的任何行為，亦不從事傷害本公司之其他公司、本公司授權之公司、上述公司員工商譽及名譽的任何行為。 \n  	\n1.7. 使用者保證使用者在本網站與本服務中使用的名稱與影像（如使用者名稱與玩家圖像）皆未侵害任何第三方之智慧財產權、隱私權或其他權利。使用者在此授權本公司得於本網站與本服務相關之任何活動使用上述名稱與影像，此授權為全球性、無授權金、不得撤回、可轉讓、可轉授權之權利，並應受制於我們的隱私權政策。 \n  	\n2. 免責聲明 \n  	\n2.1. 使用者於本服務瀏覽到的所有廣告內容、文字與圖片之說明，均由各該廣告商、產品與服務供應商所提供。使用者應自行判斷廣告之正確性。本公司僅接受委託予以刊登，不對前述廣告負擔保責任。 \n  	\n2.2. 本服務所提供之電子點數皆為合作之電子點數廠商所發行，本公司僅作為贈品的發放者，各電子點數皆有其使用期限及使用方式，使用者需自行遵照相關說明使用點數，各電子點數的使用規定及條款，請參考本公司說明。 \n  	\n2.3. 本公司並不保證本服務之軟體、網頁、伺服器、網域等所傳送的電子郵件或其內容不會含有電腦病毒等有害物；亦不保證郵件、檔案或資料之傳輸儲存均正確無誤不會斷線和出錯等，因各該郵件、檔案或資料傳送或儲存失敗、遺失或錯誤等所致之損害，本公司不負賠償責任。使用者同意於使用本服務過程中所有資料記錄，均以本公司資料庫所儲存之電子資料為準，如有糾紛或訴訟，並以該電子資料為認定標準。 \n  	\n2.4. 本公司提供使用者的服務，均依照現狀提供，對於本服務之品質、適用性、完整性和正確性，本公司不提供任何直接或間接的擔保或事實陳述。 \n  	\n2.5. 本公司得暫停、中斷、修改、移除或增加本服務之內容，且上述變更一經發生立即生效，不論本公司認為使用者是否有知悉的需要，本公司不負通知使用者上述任何變更之義務。對於此類變更決定所引起使用者的任何損失，本公司概不負責。 \n  	\n3. 權限 \n  	\n本公司得基於維護服務安全之考量，或因其他理由包含但不限於缺乏使用、或違反本務條款的明文規定及精神，終止使用者的會員帳號或本服務之使用，並將本服務內任何「會員內容」加以調整或刪除。此外，使用者同意若本服務之使用被終止，本公司對您或任何第三人均不承擔責任。關於使用者帳戶、使用本服務，或爭端解決等任何事宜，本公司管理階層的任何決定，皆為最終決策，使用者不得為複查或申訴。 \n  	\n4. 使用者之事實陳述與擔保 \n  	使用本服務前，使用者同意遵守以下條款： \n  	\n4.1. 本服務所屬任務之完成及點數之取得需按各別任務說明作執行，使用者執行任務時，需確認網路連結之順暢，若執行環境不如任務之設定而造成任務執行失敗或點數損失，本公司對此概不負責。 \n  	\n4.2. 本服務所屬任務所對應之標的物(包含但不限於店家、櫃位、商品等物件)可能因限量、庫存或店家配合度等因素而不存在於指定地點，本公司不保證使用者必定可於指定地點找到對應之標的物。 \n  	\n4.3 本公司會盡力確保各任務之可執行性，但若發生不可歸責於本公司之任務失效因素(包含但不限於感應器因意外失效、產品條碼髒汙或損毀)導致該任務無法執行，本公司對此概不負責。 \n  	\n4.4 各任務之總執行人數及期間執行人數皆有上限，執行有效期間亦有規定，名額之計算以使用者app與服務伺服器連接且完成點數計入的時間點作為基準，本公司對名額之計算有最終決策權，本服務不主動告知使用者任務完成人數。 \n  	\n4.5 若使用者對點數計算有疑慮，需於取得點數之日起算30天內按照本服務或本公司網站所公告之聯絡方式進行申訴，逾期不予受理；使用者需提出相關之獲點證據，若本公司無法確認使用者執行任務的真實性，則本公司有權取消該任務所給予之點數。 \n  	\n4.6. 使用者於取得任務點數後，點數效期即行起算至次年6月30日到期，點數到期立即失效不得再行兌換贈品或退還。 \n  	\n4.7. 使用者獲得之點數可於本軟體兌換區內兌換等值的贈品(包含但不限於實體商品、實體禮券、電子禮券)，本公司將不訂期更換贈品內容，各贈品皆有對應之可兌換數量、時間、條件限制，使用者需按各贈品之指示作兌換及領取，使用者若因操作錯誤導致兌換失敗，本公司概不負責。 \n  	\n4.8. 本公司並非各贈品的製造或供應商，故不保證產品品質或狀態，若使用者對獲得之贈品有疑慮，或有退換貨、保固之需求，應直接與該贈品所對應之廠商連絡處理。 \n  	\n4.9. 本公司不替各贈品廠商擔保可兌換之商品數量，若有贈品數量不足之情形，本公司保留更換等值贈品予使用者之權利。 \n  	\n4.10. 部分兌換贈品為實體商品，採用郵寄方式寄至使用者帳號內所登記的收件人及地址，使用者應確保帳號內資訊的正確性，若因資訊錯誤導致寄送失敗，本公司概不負責。 \n  	\n4.11. 使用本服務有可能因不可抗力因素造成損失點數，本公司對此概不負責。 \n  	\n4.12. 使用本服務完全出於使用者個人的選擇和決定，任何風險由使用者自負。 \n  	\n4.13. 使用者使用本服務，即同意我們檢查使用者的所在地理位置，以便進行使用本服務。本公司將依照中華民國的法律以及本公司之隱私權政策處理使用者資料。 \n  	\n4.14. 使用者因使用本服務而獲得的點數、贈品、或其衍生之任何稅金，完全由使用者負責繳納。 \n  	\n4.15. 本公司無法掌控使用者存取及使用本服務所需的電信網路及網路服務，若發生任何故障情事，包括但不限於斷線、連線速度緩慢、資料傳輸速度緩慢，本公司概不負責。 \n  	\n5. 使用者帳號與安全性 \n  	\n5.1 使用者需依本服務註冊表之提示提供使用者本人正確、最新的資料，並即時維持並更新使用者個人資料，確保其正確性。若使用者提供任何錯誤或不實的資料、或未按指示提供資料、或欠缺必要資料時，本服務得不經事先通知，逕行暫停或終止該帳號，並拒絕使用者使用本服務之全部或部份功能。 \n  	\n5.2. 完成本服務的註冊程序之後，使用者需維持密碼及帳號之機密安全。 \n  	\n5.3. 任何依照規定方法輸入會員帳號及密碼與使用者預設之會員帳號及密碼一致時，無論是否由本人親自輸入，均視為該使用者本人所使用。利用該密碼及帳號所進行的一切行動，該使用者將負完全的責任。 \n  	\n5.4. 使用者的帳號、密碼及會員權益均僅供個人使用及享有，不得轉借、轉讓他人或與他人合用。 \n  	\n5.5. 使用者僅得擁有並使用一個本公司帳戶。本公司禁止使用者使用多重帳戶，若使用者使用多重帳戶，本公司得不經通知立即關閉其帳戶，並凍結其點數。 \n  	\n5.6. 使用者帳號及密碼遭盜用、不當使用或其他本公司無法辯識是否為本人親自使用之情況時，本公司對此所致之損害，概不負責。 \n  	\n6. 禁止之行為 \n  	\n6.1. 除非本公司另有公告，使用者不得向他人購買或移轉點數、亦不得與他人合併點數， \n  	\n6.2. 軟體修改：使用者在任何情況下皆不得試圖修改、反編譯、進行逆向工程或分解本軟體。 \n  	\n6.3. 僅限個人用途：本服務僅供使用者個人使用，在任何情況下使用者皆不得利用本服務帳戶從事任何非本服務的行為。使用者必須提供本公司完整且真實的個人資料，並有義務在個人資料有變動時加以更新。 \n  	\n6.4. 串通作弊：本公司嚴禁使用者彼此分享不正當的獲點方法以其他方法串通作弊。本公司得限制使用者參與、或禁止使用者加入任務。此外，本公司得將使用者之間任何串通作弊行為與企圖串通作弊之行為視為對本服務條款的重大違反；據此，若使用者參與或試圖參與任何串通作弊之行為，不論該行為之結果為何，本公司有權終止該使用者之帳號。 \n  	\n6.5. 玩家外援程式（EPA）：本公司禁止玩家使用外援程式（以下簡稱「EPA程式」），此類程式的目的在為玩家提供「不公平的優勢」。本公司將「外援」定義為：本軟體之外的電腦軟體以及非軟體基礎的資料庫或人物檔案。本公司將「不公平的優勢」定義為：使用者並非親自於軟體中進行服務，而是透過其他管道取得或完成服務。 \n  	\n6.6. 自動智慧程式（BOTS）：本公司嚴禁使用者在本服務中使用人工智慧參與服務，人工智慧包括但不限於機器人或程式。使用者針對本服務所從事的所有行為，均須透過本軟體所提供的介面，由使用者親自為之。 \n  	\n6.7. 使用者同意本公司得採取行動以偵測並防止玩家使用被禁止的EPA程式，這些行動包括但不限於檢查使用者電腦上與本軟體運行的程式。使用者同意不迴避、干擾、阻擋上述行動，包括但不限於使用第三方軟體從事上述目的。 \n  	\n6.8. 使用者不得為任何侵害他人權益或違法之行為，包括但不限於： \n  	a. 公布或傳送任何誹謗、侮辱、具威脅性、攻擊性、不雅、猥褻、不實、違反公共秩序或善良風俗或其他不法之文字、圖片或任何形式的檔案 \n  	b. 侵害或毀損本公司或他人名譽、隱私權、營業秘密、商標權、著作權、專利權、其他智慧財產權及其他權利 \n  	c. 違反依法律或契約所應負之保密義務 \n  	d. 冒用他人名義使用本服務 \n  	e. 傳輸或散佈電腦病毒 \n  	f. 刊載、傳輸、發送垃圾郵件、連鎖信、違法或未經本公司許可之多層次傳銷訊息及廣告等；或儲存任何侵害他人智慧財產權或違反法令之資料 \n  	g. 對本服務其他用戶或第三人產生困擾、不悅或違反一般網路禮節致生反感之行為 \n  	h. 其他不符本服務所提供的使用目的之行為或本公司有正當理由認為不適當之行為 \n  	\n6.9. 若使用者從事本條第五點所述之行為相關之活動、任何操弄任務的行為，本公司有權採取適當措施，包括： \n  	a. 立刻封鎖使用者使用本服務； \n  	b. 關閉使用者之本公司帳戶； \n  	c. 查扣使用者帳戶中所有點數； \n  	d. 向金融機構／主管機關／法律上有權獲取此資訊之個人或團體通報並揭露使用者身分； \n  	本公司亦得對此等使用者採取法律行動。 \n  	\n7. 侮辱性語言或內容 \n  	\n7.1. 使用者使用本服務之功能時，或與本公司通訊時，禁止使用任何非法、猥褻、誹謗、破壞名譽、威脅或違反法律或一般認為具侮辱性的內容。 \n  	\n7.2. 使用者使用本服務提供之社群功能時，禁止宣傳本公司之外的任何服務或產品。此外，使用者不應對本公司或本服務做出不符事實的評論，或依常理可解讀為貶抑或批評的言論。 \n  	\n8. 違約 \n  	\n8.1.使用者違反本服務條款之全部或部分，本公司或本公司所合作提供給使用者服務之任何公司有權自行判斷並採取其認為適當的措施，包括中止本合約、立刻封鎖使用者使用本服務或本公司之其他服務、終止使用者之本公司帳戶、查扣使用者在本公司下所有帳戶內的所有點數，亦得對此等使用者採取法律行動。 \n  	\n8.2. 若因下列事由導致任何索賠、查問、債務、損害、損失、費用及開銷，包括訴訟費和所有其他形式的費用，使用者應賠償因此所生之費用，並盡最大努力協助本公司及其股東、董事和員工為答辯，並不讓前述人等受到任何傷害： \n  	a. 使用者違反本合約之全部或部分； \n  	b. 使用者觸犯任何法律或侵害任何第三方的權利； \n  	c. 使用者使用本服務，或不論有無使用者授權，他人以使用者的登入憑證使用本服務。 \n  	\n9. 責任限制 \n  	\n在任何情況下，使用者因使用（或濫用及誤用）本服務而造成特定的、偶然的、直接的、間接的或隨之而生的損害（包括但不限於營業利潤損失、營業中斷、營業資訊遺失或其他財務損失），不論該損失是否肇因於疏忽，亦不論本公司是否預見造成損失的可能性，本公司及本公司所合作的任何公司概不負責。 \n  	\n10. 適用法律 \n  	\n本約定書之解釋與適用，以及與本約定書有關的爭議，均應依照中華民國法律予以處理，雙方同意以台灣台北地方法院為第一審管轄法院。本合約中各方無條件同意，對於任一項索賠、糾紛、或對本合約的解讀分歧，以及由此而產生的任何問題，中華民國的法院有唯一管轄權。本合約中各方無條件放棄反對中華民國法院受理訴訟的權利；放棄宣稱訴訟受理法庭造成不便的權利；並放棄宣稱中華民國法院沒有司法管轄權的權利。（刪除部分與本條前半部衝突，請確認是否由台灣法院為唯一管轄） \n  	\n11. 合約可分割性 \n  	\n若本合約某一條款成為非法、無效或無法執行，不影響本合約其他條款之有效性或可執行性。 \n  	\n12. 轉讓 \n  	\n本公司得隨時轉讓本合約之全部或部分，無須公告週知。使用者不得轉讓本合約內任何使用者之權利或義務。 \n  	\n13. 其他事項 \n  	\n13.1. 若使用者違反本合約任一條款，而本公司或本公司下任何公司放棄追究該次違約行為，不得視為本公司其後亦將不追究使用者違反同一條款或本合約中任何其他條款之行為。 \n  	\n13.2. 本合約不授予或賦予任何權利或利益給非屬本合約之第三人，除經本公司同意之合作對象外。 \n  	\n13.3. 本合約不得用以訂立或視為使用者與我們具有任何合夥、代理、信託安排、受信關係或合資企業等關係。 \n  	\n13.4. 本服務條款代表使用者與本公司雙方對於本服務條款中之服務事項具有完全之合意，且本服務條款取代使用者與本公司先前達成的任何其他合約、合約或約定 \n  	\n13.5. 對於本公司要求使用者提供之所有細節和資訊，使用者須完整且如實提供；使用者於使用本服務時，一律受到本公司的隱私權政策條款所約束。 \n  	 	 	 	  ">
+            </TextView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <CheckedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="點選新用戶註冊-表示同意隱私權及服務條款"
+        android:id="@+id/checkedTextView"
+        android:checked="true"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ff0900ff" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLogin"
+                android:src="@drawable/login"
+                android:adjustViewBounds="false"
+                android:layout_marginLeft="50sp"
+                android:layout_marginRight="50sp"
+                android:scaleType="centerInside"
+                android:background="@android:color/transparent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:onClick="onButtonClick"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+        <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="#FF909090"/>
+
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Bsignup"
+                android:src="@drawable/signup"
+                android:adjustViewBounds="false"
+                android:layout_marginLeft="50sp"
+                android:layout_marginRight="50sp"
+                android:scaleType="centerInside"
+                android:background="@android:color/transparent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:onClick="onButtonClick"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+    </LinearLayout>
+
+
+</LinearLayout>

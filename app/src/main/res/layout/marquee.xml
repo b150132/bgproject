@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/et_input"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/relativeLayout"
+        android:layout_marginTop="17sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="區域選擇:"
+            android:id="@+id/txtpart"
+            android:layout_toLeftOf="@+id/spinnerJobtype"
+            android:layout_centerVertical="true" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerJobtype"
+            android:entries="@array/regiontype_list"
+            android:spinnerMode="dropdown"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewBuyType"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="left"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_ouput"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15sp"
+        android:textSize="30sp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:text="@string/hello_world" />
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_ouput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17sp"
+        android:ems="10"
+        android:hint="請輸入跑馬燈訊息..." >
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:layout_marginTop="17sp"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

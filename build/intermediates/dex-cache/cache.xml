@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\rainsilk\.gradle\caches\modules-2\files-2.1\com.parse\parse-android\1.13.1\ef266d93357210b530c5b400e3d40de64fd86a0d\parse-android-1.13.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ef266d93357210b530c5b400e3d40de64fd86a0d">
+        <dex dex="C:\Users\rainsilk\AndroidStudioProjects\bgAPP\WebViewAPP\app\build\intermediates\pre-dexed\debug\parse-android-1.13.1-42376d64ce271c1bab095f0c442b52eee8a5ddfe.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\AndroidStudioProjects\bgAPP\WebViewAPP\app\libs\imagecache.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="10057e6f3716d0eb2cd2fb1f06aff2b094aa9700">
+        <dex dex="C:\Users\rainsilk\AndroidStudioProjects\bgAPP\WebViewAPP\app\build\intermediates\pre-dexed\debug\imagecache-18d0770658148d9c16bac63aaea44647f403c6c6.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\Desktop\woo backup\20151224_Layout初版\WebViewAPP\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\rainsilk\Desktop\woo backup\20151224_Layout初版\WebViewAPP\app\build\intermediates\pre-dexed\debug\classes-8811c4f818b527414f4fffcfeba0decfa36054a5.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\AndroidStudioProjects\WebViewAPP\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\rainsilk\AndroidStudioProjects\WebViewAPP\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-c5fad4116c23fb75663fca251ccddd2113f628e0.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.4.0\cc174c559b5177982887bf6e1b76003aebad9516\bolts-android-1.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cc174c559b5177982887bf6e1b76003aebad9516">
+        <dex dex="C:\Users\rainsilk\AndroidStudioProjects\bgAPP\WebViewAPP\app\build\intermediates\pre-dexed\debug\bolts-android-1.4.0-7c00771f327a7bad7083eacd0c09380bc13969a5.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\AndroidStudioProjects\WebViewAPP\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.5.87\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="C:\Users\rainsilk\AndroidStudioProjects\WebViewAPP\app\build\intermediates\pre-dexed\debug\classes-1f8cd7018d8b99436d3fdf88ba9c9c52b9701f51.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\Desktop\woo backup\20151224_Layout初版\WebViewAPP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\rainsilk\Desktop\woo backup\20151224_Layout初版\WebViewAPP\app\build\intermediates\pre-dexed\debug\classes-17aa1c2b6cad46bb3d80b8249eedb0ab0d053ac9.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\AndroidStudioProjects\bgAPP\WebViewAPP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\rainsilk\AndroidStudioProjects\bgAPP\WebViewAPP\app\build\intermediates\pre-dexed\debug\classes-61b9ccba8f1bca09f9e830828441bfe2af973a2f.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\AndroidStudioProjects\bgAPP\WebViewAPP\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\rainsilk\AndroidStudioProjects\bgAPP\WebViewAPP\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-ff4bc05ef1237eb4d8440640111d0da29e0c2855.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\Desktop\woo backup\20151224_Layout初版\WebViewAPP\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.5.87\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="C:\Users\rainsilk\Desktop\woo backup\20151224_Layout初版\WebViewAPP\app\build\intermediates\pre-dexed\debug\classes-a2e1b6f8ce9572c48712efdb12390737a5b1dcc0.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\rainsilk\Desktop\woo backup\20151224_Layout初版\WebViewAPP\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-4e254efc2ced806947f109ad063f80ab0c812227.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\AndroidStudioProjects\bgAPP\WebViewAPP\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\rainsilk\AndroidStudioProjects\bgAPP\WebViewAPP\app\build\intermediates\pre-dexed\debug\classes-41285ea1560e3342431fb14b528bbd5359254194.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\AndroidStudioProjects\bgAPP\WebViewAPP\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.5.87\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="C:\Users\rainsilk\AndroidStudioProjects\bgAPP\WebViewAPP\app\build\intermediates\pre-dexed\debug\classes-58849a9aaef869dba499514d40cd02a5b06f15ba.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\Desktop\woo backup\20151224_Layout初版\WebViewAPP\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\rainsilk\Desktop\woo backup\20151224_Layout初版\WebViewAPP\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-6643c88d5df2f488aea03c2844c433c0213f3098.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\AndroidStudioProjects\WebViewAPP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\rainsilk\AndroidStudioProjects\WebViewAPP\app\build\intermediates\pre-dexed\debug\classes-383e7ef031bc67ad5f6026fb7b9fb4cfff0d8b81.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\AndroidStudioProjects\WebViewAPP\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\rainsilk\AndroidStudioProjects\WebViewAPP\app\build\intermediates\pre-dexed\debug\classes-e3720a5884d897f54443a6d65a1788ba89f35924.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="C:\Users\rainsilk\AndroidStudioProjects\bgAPP\WebViewAPP\app\build\intermediates\pre-dexed\debug\bolts-applinks-1.4.0-00fa5075f99660979404887a9ed728cec4909765.jar" />
+    </item>
+    <item
+        jar="C:\Users\rainsilk\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\Users\rainsilk\AndroidStudioProjects\bgAPP\WebViewAPP\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0-32bc1d7d9a493d64325ce67739c5f2d17387eb22.jar" />
+    </item>
+
+</items>
