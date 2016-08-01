@@ -4,8 +4,11 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,6 +18,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -39,6 +43,7 @@ public class Shop_1_retrive extends Activity {
     private static final int RESULT_LOAD_IMAGE = 0, RESULT_LOAD_IMAGE1 = 1, RESULT_LOAD_IMAGE2 = 2, RESULT_LOAD_IMAGE3 = 3, RESULT_LOAD_IMAGE4 = 4, RESULT_LOAD_IMAGE5 = 5, RESULT_LOAD_IMAGE6 = 6;
     ImageView imgTitle;
     int commnumber = 6;
+    LinearLayout All;
     ImageView[] imv = new ImageView[commnumber];
     TextView[] tv = new TextView[commnumber];
     TextView[] tvcost = new TextView[commnumber];
@@ -73,6 +78,7 @@ public class Shop_1_retrive extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shop_1_retrive);
 
+        All= (LinearLayout)findViewById(R.id.shopretrieve);
         mSpinShopnameType = (Spinner) findViewById(R.id.spinnerJobtype);
         mSpinShopnameType.setOnItemSelectedListener(spnRegionTypeItemSelect);
         mSpinShopnameType.setEnabled(false);
@@ -262,8 +268,12 @@ public class Shop_1_retrive extends Activity {
             String str2 = "momo購物";
             String str3 = "cc食品";
 
+            //Backgroud
+            Drawable drawable;
+            Resources res = Shop_1_retrive.this.getResources();
 //TODO:變換首頁精選商品
             if (str1.equals(chooseItem) == true) {
+
                 String shopname = "Easter1230";
                 ShopName = "Easter1230";
                 imgupcount = 0;
@@ -295,6 +305,13 @@ public class Shop_1_retrive extends Activity {
                 Log.e("rainsilk", "not 1");
 
             if (str2.equals(chooseItem) == true) {
+                drawable =  res.getDrawable(R.drawable.bg_dark);
+                All.setBackground(drawable);
+                for(int i=0;i<commnumber;i++) {
+                    tv[i].setTextColor(Color.WHITE);
+                    tvcount[i].setTextColor(Color.WHITE);
+                    tvcost[i].setTextColor(Color.WHITE);
+                }
                 imgupcount = 0;
                 String shopname = "gmail2";
                 ShopName = "gmail2";
@@ -326,6 +343,8 @@ public class Shop_1_retrive extends Activity {
                 Log.e("rainsilk", "not 2");
 
             if (str3.equals(chooseItem) == true) {
+                drawable =  res.getDrawable(R.drawable.bg_color);
+                All.setBackground(drawable);
                 imgupcount = 0;
                 String shopname = "cc";
                 ShopName = "cc";
