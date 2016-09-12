@@ -19,6 +19,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apache.http.NameValuePair;
@@ -41,8 +42,9 @@ import java.util.ArrayList;
 public class SignUp extends Activity implements View.OnClickListener {
 
     SQLite helper = new SQLite(this);
-    ImageView headphoto;
-    private static final int RESULT_LOAD_IMAGE = 1;
+    ImageView headphoto,TexiPhoto;
+    TextView TexiPhotoText;
+    private static final int RESULT_LOAD_IMAGE = 1,RESULT_LOAD_IMAGE2 = 2;
     public static final String SERVER_ADDRESS = "http://lytechly.comxa.com/";
     String assoiation = "";
     String giftshopcount = "1000";
@@ -59,6 +61,9 @@ public class SignUp extends Activity implements View.OnClickListener {
 
         headphoto = (ImageView) findViewById(R.id.imgviewHead);
         headphoto.setOnClickListener(this);
+        TexiPhoto = (ImageView) findViewById(R.id.TexiPhoto);
+        TexiPhoto.setOnClickListener(this);
+        TexiPhotoText = (TextView)findViewById(R.id.textViewTexiPhoto);
 
         ShopCheckBox = (CheckBox) findViewById(R.id.Shopcheck);
         CarCheckBox = (CheckBox) findViewById(R.id.Carcheck);
@@ -102,8 +107,12 @@ public class SignUp extends Activity implements View.OnClickListener {
                 //CheckBox狀態 : 已勾選，顯示TextView
                 Toast.makeText(getApplicationContext(), "申請成為司機!", Toast.LENGTH_SHORT).show();
                 ShopCheckBox.setEnabled(false);
+                TexiPhotoText.setVisibility(View.VISIBLE);
+                TexiPhoto.setVisibility(View.VISIBLE);
             } else {
                 ShopCheckBox.setEnabled(true);
+                TexiPhotoText.setVisibility(View.GONE);
+                TexiPhoto.setVisibility(View.GONE);
             }
         }
     };
@@ -126,6 +135,7 @@ public class SignUp extends Activity implements View.OnClickListener {
             String namestr = name.getText().toString();
             String emailstr = email.getText().toString();
             String unamestr = uname.getText().toString();
+            String texiunamestr = "texi_"+uname.getText().toString();
             String pass1str = pass1.getText().toString();
             String pass2str = pass2.getText().toString();
             String phonestr = phone_num.getText().toString();
@@ -154,6 +164,8 @@ public class SignUp extends Activity implements View.OnClickListener {
                     //uploadImage data
                     Bitmap image = ((BitmapDrawable) headphoto.getDrawable()).getBitmap();
                     new UploadImage(image, unamestr).execute();
+                    Bitmap texiimage = ((BitmapDrawable) TexiPhoto.getDrawable()).getBitmap();
+                    new UploadImage(texiimage, texiunamestr).execute();
 
                     //sign up member data
                     contact = new Contact(namestr, emailstr, unamestr, pass1str, phonestr, addressstr, assoiation, jobstr, intropersonstr, lineidstr, "0", "0", giftshopcount, "0", "0", "0", "2000");
@@ -184,6 +196,10 @@ public class SignUp extends Activity implements View.OnClickListener {
         if (v.getId() == R.id.imgviewHead) {
             Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
             startActivityForResult(galleryIntent, RESULT_LOAD_IMAGE);
+        }
+        if (v.getId() == R.id.TexiPhoto) {
+            Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            startActivityForResult(galleryIntent, RESULT_LOAD_IMAGE2);
         }
 //        if(v.getId() ==R.id.Shopcheck)
 //        {
@@ -229,6 +245,12 @@ public class SignUp extends Activity implements View.OnClickListener {
             Uri selectImage = data.getData();
             headphoto.setBackgroundColor(Color.TRANSPARENT); //@android:color/transparent
             headphoto.setImageURI(selectImage);
+        }
+
+        if (requestCode == RESULT_LOAD_IMAGE2 && resultCode == RESULT_OK && data != null) {
+            Uri selectImage2 = data.getData();
+            TexiPhoto.setBackgroundColor(Color.TRANSPARENT); //@android:color/transparent
+            TexiPhoto.setImageURI(selectImage2);
         }
     }
 

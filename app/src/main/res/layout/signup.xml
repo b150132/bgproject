@@ -142,7 +142,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="上傳計程車照片"
-            android:id="@+id/textViewTexiPhoto" />
+            android:id="@+id/textViewTexiPhoto"
+            android:visibility="gone" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -151,7 +152,8 @@
             android:ems="10"
             android:id="@+id/TexiPhoto"
             android:layout_gravity="right"
-            android:src="@drawable/uploadcommodity" />
+            android:src="@drawable/uploadcommodity"
+            android:visibility="gone" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
