@@ -82,9 +82,7 @@ public class Marquee extends Activity {
         @Override
         public void onItemSelected(AdapterView<?> parent, View v, int position, long id){
             RegionName= parent.getSelectedItem().toString();
-            Log.e("rainsilk","Region name:"+RegionName); //記中文
             Object item = parent.getItemAtPosition(position);
-            Log.e("rainsilk","position="+position); //記編號
             RegionName=Integer.toString(position);
 
         }

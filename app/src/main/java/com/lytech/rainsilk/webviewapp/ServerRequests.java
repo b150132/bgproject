@@ -41,77 +41,66 @@ public class ServerRequests {
     //register memberdata
     public String doInBackground(Contact contact, String memberID, GetUserCallback callback) {
         progressDialog.show();
-        Log.e("rainsilkinfo", "doinbackgroud;");
         new GetCount(contact, memberID, callback).execute();
         return memberID;
     }
 
     public void storeDataInBackground(Contact contact, GetUserCallback callback) {
         progressDialog.show();
-        Log.e("rainsilkinfo", "開始註冊會員資料..");
         new StoreDataAsyncTask(contact, callback).execute();
     }
 
     //fetch memberdata
     public void fetchDataInBackground(Contact contact, GetUserCallback callback) {
         progressDialog.show();
-        Log.e("rainsilkinfo", "開始取得會員資料..");
         new FetchDataAsyncTask(contact, callback).execute();
     }
 
     //set user location
     public void setLocatDataInBackground(Contact contact, GetUserCallback callback) {
         progressDialog.show();
-        Log.e("rainsilkinfo", "開始記錄定位資訊...");
         new SetLocationDataAsyncTask(contact, callback).execute();
     }
 
     //set service number
     public void setServiceDataInBackground(Contact contact, GetUserCallback callback) {
         progressDialog.show();
-        Log.e("rainsilkinfo", "開始設定服務項目...");
         new SetServiceDataAsyncTask(contact, callback).execute();
     }
 
     //save count detail
     public void storeCountDetailInBackground(Count count, GetUserCallback callback) {
         progressDialog.show();
-        Log.e("rainsilkinfo", "開始點數紀錄....");
         new StoreCountDetailAsyncTask(count, callback).execute();
     }
 
     //save marquee text
     public void storeMarDetailInBackground(Cmarquee cmarquee, GetUserCallback callback) {
         progressDialog.show();
-        Log.e("rainsilkinfo", "開始紀錄跑馬燈文字....");
         new StoreMarDetailAsyncTask(cmarquee, callback).execute();
     }
 
     //save commodity detail
     public void storeCommDetailInBackground(Commodity commodity, GetUserCallback callback) {
         progressDialog.show();
-        Log.e("rainsilkinfo", "開始產品紀錄....");
         new StoreCommDetailAsyncTask(commodity, callback).execute();
     }
 
     //save commodity sale number
     public void storeCommSaleInBackground(Commodity commodity, GetUserCallback callback) {
         progressDialog.show();
-        Log.e("rainsilkinfo", "寫入商品訂購資訊....");
         new StoreCommSaleAsyncTask(commodity, callback).execute();
     }
 
     //save service and user detail
     public void storeUserDetailInBackground(Contact contact, String service, GetUserCallback callback) {
         progressDialog.show();
-        Log.e("rainsilkinfo", "開始配對....");
         new GetServiceData(contact, service, callback).execute();
     }
 
     //check A 欄位 = B value
     public void checkCompetDataInBackground(Contact contact, String item, String id, GetUserCallback callback) {
         progressDialog.show();
-        Log.e("rainsilkinfo", "權限檢查....");
         new GetCompetData(contact, item, id, callback).execute();
     }
 
@@ -130,7 +119,6 @@ public class ServerRequests {
         @Override
         protected Void doInBackground(Void... params) {
             ArrayList<NameValuePair> data_to_send = new ArrayList<>();
-            Log.e("rainsilkinfo", "set name = " + contact.name);
             data_to_send.add(new BasicNameValuePair("name", contact.name));
             data_to_send.add(new BasicNameValuePair("email", contact.email));
             data_to_send.add(new BasicNameValuePair("username", contact.uname));
@@ -154,10 +142,8 @@ public class ServerRequests {
             try {
                 post.setEntity(new UrlEncodedFormEntity(data_to_send, HTTP.UTF_8));
                 client.execute(post);
-                Log.e("rainsilkinfo", "setEntity");
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.e("rainsilkinfo", "failed setEntity");
             }
             return null;
         }
@@ -202,15 +188,11 @@ public class ServerRequests {
                 HttpEntity entity = httpResponse.getEntity();
                 String result = EntityUtils.toString(entity);
 
-                Log.e("rainsilkinfo", "result =" + result);
-
                 JSONObject jsonObject = new JSONObject(result);
                 retunedContact = null;
-                Log.e("rainsilkinfo", "FetchsetEntity");
 
                 if (jsonObject.length() == 0) {
                     retunedContact = null;
-                    Log.e("rainsilkinfo", "retunedContact = null;");
                 } else {
                     String name, email, phone, address, assoiation, job, introperson, lineid;
                     String id;
@@ -274,7 +256,6 @@ public class ServerRequests {
 
                     if (jsonObject.has("level"))
                         level = jsonObject.getString("level");
-                    Log.e("rainsilkinfo", "login in count =" + count);
 
                     retunedContact = new Contact(name, email, contact.uname, contact.pass, phone, address, assoiation, job, introperson, lineid, id, count, giftcount, carcount, evaluation, performance, level);
 
@@ -282,7 +263,6 @@ public class ServerRequests {
 
 
             } catch (Exception e) {
-                Log.e("rainsilkinfo", "Fetch failed");
                 e.printStackTrace();
             }
             return retunedContact;
@@ -316,11 +296,8 @@ public class ServerRequests {
         protected Contact doInBackground(Void... params) {
             ArrayList<NameValuePair> data_to_send = new ArrayList<>();
             data_to_send.add(new BasicNameValuePair("id", contact.id));
-            Log.e("rainsilkinfo", "queryid =" + contact.id);
             data_to_send.add(new BasicNameValuePair("location1", contact.location1));
             data_to_send.add(new BasicNameValuePair("location2", contact.location2));
-            Log.e("rainsilkinfo", "sentlocation =" + contact.location1);
-            Log.e("rainsilkinfo", "sentlocation2 =" + contact.location2);
 
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -336,16 +313,12 @@ public class ServerRequests {
                 HttpEntity entity = httpResponse.getEntity();
                 String result = EntityUtils.toString(entity);
 
-                Log.e("rainsilkinfo", "result =" + result);
-
                 JSONObject jsonObject = new JSONObject(result);
 
                 retunedContact = null;
-                Log.e("rainsilkinfo", "SetLocation");
 
                 if (jsonObject.length() == 0) {
                     retunedContact = null;
-                    Log.e("rainsilkinfo", "retunedContact = null;");
                 } else {
                     String name, email, phone, address, assoiation, job, introperson, lineid;
                     String id;
@@ -391,12 +364,10 @@ public class ServerRequests {
                         level = jsonObject.getString("level");
 
                     retunedContact = null;//new Contact(name,email,contact.uname,contact.pass,phone,address,assoiation,job,introperson,lineid,id,count,"0","0","0",level);
-                    Log.e("rainsilkinfo", "retunedContact =new contact;");
                 }
 
 
             } catch (Exception e) {
-                Log.e("rainsilkinfo", "SetLocation failed");
                 e.printStackTrace();
             }
             return retunedContact;
@@ -431,9 +402,7 @@ public class ServerRequests {
             ArrayList<NameValuePair> data_to_send = new ArrayList<>();
 
             data_to_send.add(new BasicNameValuePair("id", contact.id));
-            Log.e("rainsilkinfo", "setservice id =" + contact.id);
             data_to_send.add(new BasicNameValuePair("service", contact.service));
-            Log.e("rainsilkinfo", "sent service =" + contact.service);
 
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -448,14 +417,12 @@ public class ServerRequests {
                 HttpResponse httpResponse = client.execute(post);
                 HttpEntity entity = httpResponse.getEntity();
                 String result = EntityUtils.toString(entity);
-                Log.e("rainsilkinfo", "result =" + result);
 
                 JSONObject jsonObject = new JSONObject(result);
 
                 retunedContact = null;
                 if (jsonObject.length() == 0) {
                     retunedContact = null;
-                    Log.e("rainsilkinfo", "retunedContact = null;");
                 } else {
                     String name, email, phone, address, assoiation, job, introperson, lineid;
                     String id;
@@ -501,12 +468,10 @@ public class ServerRequests {
                         level = jsonObject.getString("level");
 
                     retunedContact = null;//new Contact(name,email,contact.uname,contact.pass,phone,address,assoiation,job,introperson,lineid,id,count,"0","0","0",level);
-                    Log.e("rainsilkinfo", "retunedContact =new contact;");
                 }
 
 
             } catch (Exception e) {
-                Log.e("rainsilkinfo", "SetService failed");
                 e.printStackTrace();
             }
             return retunedContact;
@@ -536,7 +501,6 @@ public class ServerRequests {
             this.contact = contact;
             this.callback = callback;
             this.id = id;
-            Log.e("rainsilkinfo", "GetCount function id=" + id);
         }
 
         @Override
@@ -558,12 +522,10 @@ public class ServerRequests {
                 HttpEntity entity = httpResponse.getEntity();
                 String result = EntityUtils.toString(entity);
 
-                Log.e("rainsilkinfo", "getCount result =" + result);
-
                 JSONObject jsonObject = new JSONObject(result);
 
                 if (jsonObject.length() == 0) {
-                    Log.e("rainsilkinfo", "retuned count fetch = null;");
+
                 } else {
                     String count = null, giftcount = null, carcount = null;
 
@@ -574,24 +536,13 @@ public class ServerRequests {
                     if (jsonObject.has("carcount"))
                         carcount = jsonObject.getString("carcount");
 
-                    Log.e("rainsilklog", "json count" + count);
-                    Log.e("rainsilklog", "json giftcount" + giftcount);
-                    Log.e("rainsilklog", "json carcount" + carcount);
-
                     new Contact("guest", "mail", "guest", "pass", "phone", "add", "ass", "job", "intro", "line", id, count, giftcount, carcount, "0", "0", "0");
-
-                    Log.e("rainsilklog", "Contact count" + contact.count); //上一次的
-                    Log.e("rainsilklog", "Contact giftcount" + contact.giftcount);
                     contact.setCount(count);//在這改記別人的點數!!!!!!!!!!
                     contact.setGiftCount(giftcount);
                     contact.setCarCount(carcount);
-                    Log.e("rainsilklog", "會員 count" + contact.count);
-                    Log.e("rainsilklog", "會員 giftcount" + contact.giftcount);
-                    Log.e("rainsilklog", "會員 carcount" + contact.carcount);
                 }
             } catch (Exception e) {
                 //TODO: 查無此count show message?
-                Log.e("rainsilkinfo", "查無此會員,請重試");
                 e.printStackTrace();
             }
             return null;
@@ -619,7 +570,7 @@ public class ServerRequests {
         @Override
         protected Void doInBackground(Void... params) {
             ArrayList<NameValuePair> data_to_send = new ArrayList<>();
-            Log.e("rainsilkinfo", "set type = " + count.type);
+
             data_to_send.add(new BasicNameValuePair("type", count.type));
             data_to_send.add(new BasicNameValuePair("fromid", count.fromid));
             data_to_send.add(new BasicNameValuePair("toid", count.toid));
@@ -638,10 +589,8 @@ public class ServerRequests {
             try {
                 post.setEntity(new UrlEncodedFormEntity(data_to_send, HTTP.UTF_8));
                 client.execute(post);
-                Log.e("rainsilkinfo", "setEntity");
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.e("rainsilkinfo", "failed setEntity");
             }
             return null;
         }
@@ -673,10 +622,6 @@ public class ServerRequests {
             data_to_send.add(new BasicNameValuePair("area", cmarquee.area));
             data_to_send.add(new BasicNameValuePair("text", cmarquee.text));
             data_to_send.add(new BasicNameValuePair("time", cmarquee.time));
-            Log.e("rainsilkinfo", "set mar text= " + cmarquee.text);
-            Log.e("rainsilkinfo", "set mar time = " + cmarquee.time);
-            Log.e("rainsilkinfo", "set mar sendby = " + cmarquee.sendby);
-            Log.e("rainsilkinfo", "set mar area = " + cmarquee.area);
 
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -687,10 +632,8 @@ public class ServerRequests {
             try {
                 post.setEntity(new UrlEncodedFormEntity(data_to_send, HTTP.UTF_8));
                 client.execute(post);
-                Log.e("rainsilkinfo", "set marEntity");
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.e("rainsilkinfo", "failed set marEntity");
             }
             return null;
         }
@@ -735,10 +678,8 @@ public class ServerRequests {
             try {
                 post.setEntity(new UrlEncodedFormEntity(data_to_send, HTTP.UTF_8));
                 client.execute(post);
-                Log.e("rainsilkinfo", "setEntity");
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.e("rainsilkinfo", "failed setEntity");
             }
             return null;
         }
@@ -769,7 +710,6 @@ public class ServerRequests {
             data_to_send.add(new BasicNameValuePair("shop", commodity.shop));
             data_to_send.add(new BasicNameValuePair("num", commodity.num));
             data_to_send.add(new BasicNameValuePair("addnum", commodity.sale));
-            Log.e("rainsilkinfo", "shop,num,sale="+ commodity.shop+"."+commodity.num+","+commodity.sale);
 
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -780,10 +720,8 @@ public class ServerRequests {
             try {
                 post.setEntity(new UrlEncodedFormEntity(data_to_send, HTTP.UTF_8));
                 client.execute(post);
-                Log.e("rainsilkinfo", "setEntity");
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.e("rainsilkinfo", "failed setEntity");
             }
             return null;
         }
@@ -808,7 +746,6 @@ public class ServerRequests {
             this.contact = contact;
             this.callback = callback;
             this.service = service;
-            Log.e("rainsilkinfo", "GetUserbyService service=" + service);
         }
 
         @Override
@@ -830,12 +767,10 @@ public class ServerRequests {
                 HttpEntity entity = httpResponse.getEntity();
                 String result = EntityUtils.toString(entity);
 
-                Log.e("rainsilkinfo", "getUser result =" + result);
-
                 JSONObject jsonObject = new JSONObject(result);
 
                 if (jsonObject.length() <= 2) {
-                    Log.e("rainsilkinfo", "retuned user fetch = null;");
+
                 } else {
                     String guestid = null, lineid = null;
                     String phone = null;
@@ -852,16 +787,7 @@ public class ServerRequests {
                     if (jsonObject.has("locationtwo"))
                         location2 = jsonObject.getString("locationtwo");
 
-                    Log.e("rainsilklog", "json guestid" + guestid);
-                    Log.e("rainsilklog", "json lineid" + lineid);
-
                     new Contact("name", "mail", "guest", "pass", phone, "add", "ass", "job", "intro", lineid, guestid, "count", "giftcount", "carcount", "evalu", "0", "0");
-//                    String name,String email,String uname,String pass,String phone_num,
-//                        String address,String assoiation,String job,String introperson,String lineid,String id,String count,String giftcount,String evaluaion,String performance,String level)
-//                    {
-                    //new Contact(guestid,location1,location2);
-                    Log.e("rainsilklog", "new Contact id" + contact.id);
-                    Log.e("rainsilklog", "new Contact giftcount" + contact.lineid);
 
                     contact.setID(guestid);//在這改記客戶的資料!!!!!!!!!!
                     contact.setlineid(lineid);
@@ -869,16 +795,8 @@ public class ServerRequests {
                     contact.setLocation1(location1);
                     contact.setLocation2(location2);
 
-                    Log.e("rainsilklog", "Contact guestid" + contact.id);
-                    Log.e("rainsilklog", "Contact guestline" + contact.lineid);
-                    Log.e("rainsilklog", "Contact phone" + contact.phone_num);
-//                    new Count(id,memberCount);
-//                    Log.e("rainsilklog","Count count"+count.count);
-
-
                 }
             } catch (Exception e) {
-                Log.e("rainsilkinfo", "Fetch user failed");
                 e.printStackTrace();
             }
 
@@ -906,7 +824,6 @@ public class ServerRequests {
             this.callback = callback;
             this.item = item;
             this.id = id;
-            Log.e("rainsilkinfo", "GetCompetData function item=" + item + ",id=" + id);
         }
 
         @Override
@@ -929,31 +846,23 @@ public class ServerRequests {
                 HttpEntity entity = httpResponse.getEntity();
                 String result = EntityUtils.toString(entity);
 
-                Log.e("rainsilkinfo", "getCompet result =" + result);
-
                 JSONObject jsonObject = new JSONObject(result);
 
                 if (jsonObject.length() == 0) {
                     //查無權限資料
-                    Log.e("rainsilkinfo", "retuned Compet fetch = null;");
                 } else {
                     if (jsonObject.has(item))
                         ritem = jsonObject.getString(item);
 
-                    Log.e("rainsilklog", "json ritem" + ritem);
-
                     new Contact("guest", "mail", "guest", "pass", "phone", "add", "ass", "job", "intro", "line", "id", "count", "giftcount", "carcount", "0", "0", ritem);
 
-                    Log.e("rainsilklog", "Contact level" + contact.level);
                     contact.setLevel(ritem);//在這改記別人的權限!!!!!!!!!!
-                    Log.e("rainsilklog", "Change Contact level" + contact.level);
+
                 }
             } catch (Exception e) {
                 //TODO: 查無此level參數
-                Log.e("rainsilkinfo", "level Fetch failed");
                 e.printStackTrace();
             }
-            Log.e("rainsilklog", "return member level " + ritem);
             return null;
         }
 

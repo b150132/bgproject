@@ -58,7 +58,6 @@ public class Shop_1_retrive extends Activity {
     Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            Log.e("rainsilk", "msg.what=" + msg.what);
 
             tv[msg.what - 1].setText(commName);
             tvcost[msg.what - 1].setText(commPrice);
@@ -117,9 +116,7 @@ public class Shop_1_retrive extends Activity {
         public void run() {
             // 運行網路連線的程式
             Showcomminfo(ShopName);
-            Log.e("riansilk", "run!!!!!!!!!");
-
-        }
+            }
     };
 
     private class DownloadImage extends AsyncTask<Void, Void, Bitmap> {
@@ -186,7 +183,6 @@ public class Shop_1_retrive extends Activity {
                         gotocart.setEnabled(true);
                         break;
                     default:
-                        Log.e("rainsilk", "ERROR: Download exception!");
                         break;
                 }
 
@@ -257,12 +253,10 @@ public class Shop_1_retrive extends Activity {
         @Override
         public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
             ShopName = parent.getSelectedItem().toString();
-            Log.e("rainsilk", "Region name:" + ShopName);
 
             //mTxtB.setText(getString(R.string.buytype_select)+parent.getSelectedItem().toString());
             Object item = parent.getItemAtPosition(position);
             String chooseItem = item.toString();
-            Log.e("rainsilk", "ITEM=" + chooseItem);
 
             String str1 = "e-圓排骨";
             String str2 = "momo購物";
@@ -301,9 +295,7 @@ public class Shop_1_retrive extends Activity {
                 new DownloadImage(fourstr).execute();
                 new DownloadImage(fivestr).execute();
                 new DownloadImage(sixstr).execute();
-            } else
-                Log.e("rainsilk", "not 1");
-
+            }
             if (str2.equals(chooseItem) == true) {
                 drawable =  res.getDrawable(R.drawable.bg_dark);
                 All.setBackground(drawable);
@@ -339,8 +331,7 @@ public class Shop_1_retrive extends Activity {
                 new DownloadImage(fourstr).execute();
                 new DownloadImage(fivestr).execute();
                 new DownloadImage(sixstr).execute();
-            } else
-                Log.e("rainsilk", "not 2");
+            }
 
             if (str3.equals(chooseItem) == true) {
                 drawable =  res.getDrawable(R.drawable.bg_color);
@@ -367,9 +358,7 @@ public class Shop_1_retrive extends Activity {
                 new DownloadImage(fourstr).execute();
                 new DownloadImage(fivestr).execute();
                 new DownloadImage(sixstr).execute();
-            } else
-                Log.e("rainsilk", "not 3");
-
+            }
 
             switch (parent.getSelectedItem().toString()) {
                 case "":
@@ -388,9 +377,7 @@ public class Shop_1_retrive extends Activity {
 
         try {
             String result = DBConnector.executeQueryComm(localshop);
-            Log.e("rainsilk", "comm info result=" + result);
             JSONArray jsonArray = new JSONArray(result);
-            Log.e("rainsilk", "jsonArray.length()=" + jsonArray.length());
             //處理取得之商品資訊
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonData = jsonArray.getJSONObject(i);
@@ -399,7 +386,7 @@ public class Shop_1_retrive extends Activity {
                 String commNum = jsonData.getString("Num");
                 commPrice = jsonData.getString("Price");
                 commCount = jsonData.getString("Count");
-                Log.e("rainsilk", "comm i=" + i + 1);
+
                 Message msg = mHandler.obtainMessage();
                 msg.what = i + 1;
                 msg.sendToTarget();
@@ -407,7 +394,7 @@ public class Shop_1_retrive extends Activity {
                 thread.sleep(500);
             }//END OF FOR LOOP
         } catch (Exception e) {
-            Log.e("log_tag", e.toString());
+
         }
     }
 

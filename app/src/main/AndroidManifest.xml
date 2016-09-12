@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lytech.rainsilk.webviewapp" >
+    package="com.lytech.rainsilk.webviewapp"
+    android:versionCode="1"
+    android:versionName="1.0"
+    >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -108,7 +111,7 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="@string/google_maps_key"
+            android:value="AIzaSyD6VhuaoJ-ruGDjVTuWr59KZyd2JlU9ONg"
             />
         <!--debug key     android:value="@string/google_maps_key"-->
         <!--release key    AIzaSyD6VhuaoJ-ruGDjVTuWr59KZyd2JlU9ONg-->

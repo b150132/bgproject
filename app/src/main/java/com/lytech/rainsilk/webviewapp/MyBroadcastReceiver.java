@@ -5,7 +5,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
-import android.util.Log;
 import android.widget.Toast;
 
 /**
@@ -22,14 +21,11 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
     public void onReceive(final Context context, final Intent intent) {
         localDatabase = new LocalDatabase(context);
 
-        Log.e("HelloBroadReciever", "TIME TICK!!!!!!!!!!!!!!!!!!!!!!!!!");
-        Log.e("HelloBroadReciever", "" + intent.getAction());
-
         final Contact contact = localDatabase.getLoggedInUser();
         // 讀取包含在Intent物件中的資料
         String service;// = intent.getStringExtra("service");
         service = contact.id;//"22";//查詢是否有用戶的服務代碼為我自己
-        Log.e("rainsilkinfo", "my service(id)" + service);
+
         int age = intent.getIntExtra("age", -1);
 
         //sign up member data
@@ -45,7 +41,6 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
         serverRequests.storeUserDetailInBackground(contact, service, new GetUserCallback() {
             @Override
             public void done(Contact returnedContact) {
-                Log.e("rainsilkinfo", "結束資料庫查詢");
 
                 String guestid = contact.getID();
                 String guestline = contact.getlineid();

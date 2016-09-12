@@ -65,7 +65,6 @@ public class Buy extends Activity {
             mTxtB.setText(getString(R.string.buytype_select)+parent.getSelectedItem().toString());
             Object item = parent.getItemAtPosition(position);
             String chooseItem = item.toString();
-            Log.e("rainsilk","ITEM="+chooseItem);
 
             String str1= "輔食";
             String str2= "配方奶粉";
@@ -74,18 +73,12 @@ public class Buy extends Activity {
 
             if(str1.equals(chooseItem)==true)
                imgBuy.setImageResource(R.drawable.shop);
-            else
-                Log.e("rainsilk","not fus");
 
             if(str2.equals(chooseItem)==true)
                 imgBuy.setImageResource(R.drawable.buy_2);
-            else
-                Log.e("rainsilk","not nifan");
 
             if(str3.equals(chooseItem)==true)
                 imgBuy.setImageResource(R.drawable.buy_3);
-            else
-                Log.e("rainsilk","not inyunping");
 
             switch(parent.getSelectedItem().toString())
             {

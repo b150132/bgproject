@@ -126,7 +126,6 @@ public class Job_carinfo extends Activity {
             String result = null;
             String jobcode = String.valueOf(servicecode + 1);
             result = DBConnector.executeQuery(jobcode);
-            Log.e("rainsilk", "car info result=" + result);
 
                /*
                              SQL 結果有多筆資料時使用JSONArray
@@ -163,19 +162,11 @@ public class Job_carinfo extends Activity {
 
 //                    ///////////////////////////////////////////////////////
                 TextView mTxtLocation = new TextView(Job_carinfo.this);
-
-
-                Log.e("rainsilk", "Olat" + Olat);
-                Log.e("rainsilk", "Olng" + Olng);
-                Log.e("rainsilk", "json lng=" + jsonData.getString("Locationone") + "lng=" + jsonData.getString("Locationtwo"));
                 float results[] = new float[1];
 
                 Location.distanceBetween(Olat, Olng,
                         Double.parseDouble(jsonData.getString("Locationone")), Double.parseDouble(jsonData.getString("Locationtwo")), results);
 
-                Log.e("rainsilk", "string lat=" + Olat + "lng=" + Olng + "lng=" + jsonData.getString("Locationone") + "lng=" + jsonData.getString("Locationtwo"));
-                Log.e("rainsilk", "double lat=" + Olat + " " + Olng + " " +
-                        Double.parseDouble(jsonData.getString("Locationone")) + " " + Double.parseDouble(jsonData.getString("Locationtwo")));
                 final String distance = NumberFormat.getInstance().format(results[0]);
 
                 float min = results[0] / 700;
@@ -188,8 +179,6 @@ public class Job_carinfo extends Activity {
                 btnChoose.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
                         //TODO:客戶選中+改資料庫狀態
-                        Log.e("rainsilk", "計程車會員ID=" + user_id.getText().toString());
-                        Log.e("rainsilk", "計程車LINE ID=" + Lineid);
                         GoRating.setEnabled(true);
                         ServiceCancel.setEnabled(true);
                         btnChoose.setEnabled(false);
@@ -223,7 +212,7 @@ public class Job_carinfo extends Activity {
                 user_list.addView(tr);
             }
         } catch (Exception e) {
-            Log.e("log_tag", e.toString());
+
         }
     }
 
@@ -232,7 +221,7 @@ public class Job_carinfo extends Activity {
         serverRequests.setServiceDataInBackground(contact, new GetUserCallback() {
             @Override
             public void done(Contact returnedContact) {
-                Log.e("rainsilkinfo", "Setservice");
+
             }
         });
     }

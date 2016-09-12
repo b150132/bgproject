@@ -83,10 +83,8 @@ public class SignUp0 extends Activity {
                 }
             }
             for(int j = 0; j < assoiation.length; j++) {
-                Log.e("rainsilk", String.valueOf(assoiation[j]));
                 string_assoia=string_assoia+String.valueOf(assoiation[j]);
             }
-            Log.e("rainsilk", "String="+string_assoia);
 
             Intent i = new Intent(SignUp0.this,SignUp.class);
             i.putExtra("ass", string_assoia);

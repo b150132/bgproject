@@ -1,7 +1,5 @@
 package com.lytech.rainsilk.webviewapp;
 
-import android.util.Log;
-
 /**
  * Created by rainsilk on 2015/12/18.
  */
@@ -50,18 +48,12 @@ public class Contact {
     public Contact(String uname, String pass) {
         this.uname = uname;
         this.pass = pass;
-        Log.e("rainsilkinfo", "uname=" + uname);
-        Log.e("rainsilkinfo", "pass=" + pass);
     }
 
     public Contact(String id, String location1, String location2) {
         this.id = id;
         this.location1 = location1;
         this.location2 = location2;
-        Log.e("rainsilkinfo", "id=" + id);
-        Log.e("rainsilkinfo", "location1=" + location1);
-        Log.e("rainsilkinfo", "location2=" + location2);
-
     }
 
     public String getService() {
@@ -69,7 +61,6 @@ public class Contact {
     }
 
     public void setService(String service) {
-        Log.e("rainsilkinfo", "setservice=" + service);
         this.service = service;
     }
 

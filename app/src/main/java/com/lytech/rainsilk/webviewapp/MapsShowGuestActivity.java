@@ -56,12 +56,9 @@ public class MapsShowGuestActivity extends FragmentActivity implements Connectio
     Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            Log.e("rainsilk", "location msg.what=" + msg.what);
 
             guestlat[msg.what - 1] = Double.parseDouble(temp1);
             guestlng[msg.what - 1] = Double.parseDouble(temp2);
-
-            Log.e("rainsilk", "location=" + guestlat[msg.what - 1] + "," + guestlng[msg.what - 1]);
 
             MarkerOptions markerOptthread = new MarkerOptions();
             markerOptthread.position(new LatLng(guestlat[msg.what - 1], guestlng[msg.what - 1]));
@@ -222,8 +219,6 @@ public class MapsShowGuestActivity extends FragmentActivity implements Connectio
                             Intent result = new Intent();
                             result.putExtra("lat", currentLocation.getLatitude());
                             result.putExtra("lng", currentLocation.getLongitude());
-                            Log.e("rainsilk", "lat=" + currentLocation.getLatitude());
-                            Log.e("rainsilk", "lng=" + currentLocation.getLongitude());
                             setResult(Activity.RESULT_OK, result);
                             finish();
                         }

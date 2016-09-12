@@ -42,8 +42,7 @@ public class CheckLineFinish extends Activity {
         String phone = intent.getStringExtra("PHONE");
         String locat1 = intent.getStringExtra("LOCAT1");
         String locat2 = intent.getStringExtra("LOCAT2");
-        Log.e("rainsilk", "checklinefinish locat1=" + locat1);
-        Log.e("rainsilk", "checklinefinish locat2=" + locat2);
+
         //自經緯度取得地址
         String returnAddress = " ";
         Geocoder gc = new Geocoder(CheckLineFinish.this);
@@ -108,12 +107,9 @@ public class CheckLineFinish extends Activity {
     }
 
     protected void onNewIntent(Intent intent) {
-        Log.e("rainsilkinfo", "新intent");
         super.onNewIntent(intent);
         //退出
         if ((Intent.FLAG_ACTIVITY_CLEAR_TOP & intent.getFlags()) != 0) {
-            Log.e("rainsilkinfo", "符合條件");
-            //finish();
 
         }
     }

@@ -36,7 +36,6 @@ import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -173,14 +172,11 @@ public class Change_count extends Activity {
                     edtxt_result.setFocusableInTouchMode(true);
                     edtxt_result.requestFocus();
                     edtxt_result.requestFocusFromTouch();
-                    Log.e("rainsilk", "edtxt request");
-
                 }
 
                 //如果字數達到4，取消自己焦點，隱藏虛擬鍵盤
                 if (edtxt_result.getText().toString().length() == 4) {
                     edtxt_result.clearFocus();
-                    Log.e("rainsilk", "edtxt clear");
                 }
             }
         };
@@ -204,14 +200,14 @@ public class Change_count extends Activity {
 
             //service count
             servicecount = edtxt_result.getText().toString();
-            Log.e("rainsilk", "servicecount=" + servicecount);
+
             //GUEST ID
             memberID = etMember.getText().toString();
-            Log.e("rainsilk", "memberID=" + memberID);
+
             //Self ID
             boolean authenticate = localDatabase.getUserLoggedIn();
 
-            if (authenticate) {
+
 
                 //交易成立:
                 final Contact contact = localDatabase.getLoggedInUser();
@@ -243,46 +239,37 @@ public class Change_count extends Activity {
                                             mycount = contact.getCount(); //消費點數
                                             mygiftcount = contact.getGiftCount(); //店家點數
                                             mycarcount = contact.getCarCount();//運輸點數
-                                            Log.e("rainsilk", "count info- count=" + mycount + ",shopcount=" + mygiftcount + ",carcount=" + mycarcount);
 
                                             if (chooseItem2.equals(chooseItem) == true) {
                                                 //選擇相同,錯誤:點數型態不得相同
-                                                Log.e("rainsilk", "change count=same");
                                                 Toast.makeText(Change_count.this, "選擇錯誤,請選不同點數進行兌換", Toast.LENGTH_LONG).show();
                                             } else {
                                                 //計算出三點數互換的數值 存起來
                                                 if (chooseItem.equals(str1) == true && chooseItem2.equals(str2)) {
                                                     //消費to店家
-                                                    Log.e("rainsilk", "count to shopcount 1");
                                                     mycount = Integer.toString(Integer.parseInt(mycount) - Integer.parseInt(servicecount));
                                                     mygiftcount = Integer.toString(Integer.parseInt(mygiftcount) + (int) (Double.parseDouble(servicecount) * 1.2)); //買1000送200
 
                                                 } else if (chooseItem.equals(str1) == true && chooseItem2.equals(str3)) {
                                                     //消費to運輸
-                                                    Log.e("rainsilk", "count to carcount 2");
                                                     mycount = Integer.toString(Integer.parseInt(mycount) - Integer.parseInt(servicecount));
                                                     mygiftcount = Integer.toString(Integer.parseInt(mygiftcount) + (int) (Double.parseDouble(servicecount) * 0.2)); //買1000送200
                                                     mycarcount = Integer.toString(Integer.parseInt(mycarcount) + (int) (Double.parseDouble(servicecount) * 1.0)); //買1000送200
 
                                                 } else if (chooseItem.equals(str2) == true && chooseItem2.equals(str3)) {
                                                     //店家to運輸
-                                                    Log.e("rainsilk", "shopcount to carcount 3");
                                                     mygiftcount = Integer.toString(Integer.parseInt(mygiftcount) - Integer.parseInt(servicecount) - 200); //扣手續點200
                                                     mycarcount = Integer.toString(Integer.parseInt(mycarcount) + Integer.parseInt(servicecount));
 
 
-                                                } else if (chooseItem.equals(str3) == true && chooseItem2.equals(str2)) {
+                                                } else {
                                                     //運輸to店家
-                                                    Log.e("rainsilk", "carcount to shopcount 4");
-
                                                     mygiftcount = Integer.toString(Integer.parseInt(mygiftcount) + Integer.parseInt(servicecount));
                                                     mycarcount = Integer.toString(Integer.parseInt(mycarcount) - Integer.parseInt(servicecount) - 200);//扣手續點200
-                                                } else
-                                                    Log.e("rainsilk", "not 2");
+                                                }
                                             }//END OF 點數選項不相同
 
                                             //TODO:點數不可為負!
-                                            Log.e("rainsilk", "result count info- count=" + mycount + ",shopcount=" + mygiftcount + ",carcount=" + mycarcount);
 
                                             //寫入店家自己
                                             new SetCount(contact.id, mycount, mygiftcount, mycarcount).execute();
@@ -292,7 +279,7 @@ public class Change_count extends Activity {
 
                                             //印出的結果是 "Sat Apr 13 16:50:03 台北標準時間 2013"
                                             String time = mDate.toString();
-                                            Log.e("rainsilk time", "time=" + time);
+
                                             //轉換作業 7
                                             count = new Count("7", contact.id, "change", mycount, "memberCount", mygiftcount, mycarcount, time);
 
@@ -302,8 +289,7 @@ public class Change_count extends Activity {
                                             serverRequests.storeCountDetailInBackground(count, new GetUserCallback() {
                                                 @Override
                                                 public void done(Contact returnedContact) {
-                                                    Log.e("rainsilk buy count ", "finish");
-                                                    finish();
+                                                   finish();
                                                 }
                                             });
 
@@ -317,8 +303,7 @@ public class Change_count extends Activity {
                             }
                         })
                         .show();
-            } else
-                Log.e("rainsilk", "auth fail");
+
         }
 
     }
@@ -348,11 +333,6 @@ public class Change_count extends Activity {
             data_to_send.add(new BasicNameValuePair("giftcount", giftcount));
             data_to_send.add(new BasicNameValuePair("carcount", carcount));
 
-            Log.e("rainsilkinfo", "set id =" + id);
-            Log.e("rainsilkinfo", "set count =" + count);
-            Log.e("rainsilkinfo", "set giftcount =" + giftcount);
-            Log.e("rainsilkinfo", "set carcount =" + carcount);
-
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
             HttpConnectionParams.setSoTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -365,18 +345,8 @@ public class Change_count extends Activity {
                 HttpResponse httpResponse = client.execute(post);
                 HttpEntity entity = httpResponse.getEntity();
                 String result = EntityUtils.toString(entity);
-                Log.e("rainsilkinfo", "set count result =" + result);
-
-                JSONObject jsonObject = new JSONObject(result);
-
-                if (jsonObject.length() == 0) {
-                    Log.e("rainsilkinfo", "retunedContact = null;");
-                } else {
-                    Log.e("rainsilkinfo", "retunedContact =new count;");
-                }
 
             } catch (Exception e) {
-                Log.e("rainsilkinfo", "SetCount failed");
                 e.printStackTrace();
             }
             return null;
@@ -395,12 +365,11 @@ public class Change_count extends Activity {
         @Override
         public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
             CType1 = parent.getSelectedItem().toString();
-            Log.e("rainsilk", "Region name:" + CType1);
 
             //mTxtB.setText(getString(R.string.buytype_select)+parent.getSelectedItem().toString());
             Object item = parent.getItemAtPosition(position);
             chooseItem = item.toString();
-            Log.e("rainsilk", "ITEM=" + chooseItem);
+
             switch (parent.getSelectedItem().toString()) {
                 case "":
                     break;
@@ -415,12 +384,10 @@ public class Change_count extends Activity {
         @Override
         public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
             CType2 = parent.getSelectedItem().toString();
-            Log.e("rainsilk", "Region name:" + CType2);
 
-            //mTxtB.setText(getString(R.string.buytype_select)+parent.getSelectedItem().toString());
             Object item = parent.getItemAtPosition(position);
             chooseItem2 = item.toString();
-            Log.e("rainsilk", "ITEM=" + chooseItem2);
+
             switch (parent.getSelectedItem().toString()) {
                 case "":
                     break;

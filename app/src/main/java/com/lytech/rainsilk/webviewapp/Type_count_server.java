@@ -160,14 +160,11 @@ public class Type_count_server extends Activity {
                     edtxt_result.setFocusableInTouchMode(true);
                     edtxt_result.requestFocus();
                     edtxt_result.requestFocusFromTouch();
-                    Log.e("rainsilk", "edtxt request");
-
                 }
 
                 //如果字數達到4，取消自己焦點，隱藏虛擬鍵盤
                 if (edtxt_result.getText().toString().length() == 4) {
                     edtxt_result.clearFocus();
-                    Log.e("rainsilk", "edtxt clear");
                 }
             }
         };
@@ -190,10 +187,8 @@ public class Type_count_server extends Activity {
         if (v.getId() == R.id.btOK) {
             //service count
             servicecount = edtxt_result.getText().toString();
-            Log.e("rainsilk", "servicecount=" + servicecount);
             //GUEST ID
             memberID = etMember.getText().toString();
-            Log.e("rainsilk", "memberID=" + memberID);
 //            //Self ID
             boolean authenticate = localDatabase.getUserLoggedIn();
 
@@ -229,7 +224,6 @@ public class Type_count_server extends Activity {
 
                         //印出的結果是 "Sat Apr 13 16:50:03 台北標準時間 2013"
                         String time = mDate.toString();
-                        Log.e("rainsilk time", "time=" + time);
                         count = new Count("1", contact.id, memberID, "mycount", memberCount, "mygiftcount", res1, time);
 
                         Context mCtx;
@@ -238,18 +232,14 @@ public class Type_count_server extends Activity {
                         serverRequests.storeCountDetailInBackground(count, new GetUserCallback() {
                             @Override
                             public void done(Contact returnedContact) {
-                                Log.e("rainsilk buy count ", "finish");
                                 finish();
                             }
                         });
 
-
                     }
                 });
 
-
-            } else
-                Log.e("rainsilk", "auth fail");
+            }
         }
 
     }
@@ -265,7 +255,6 @@ public class Type_count_server extends Activity {
             this.id = id;
             this.count = count;
             this.giftcount = giftcount;
-            Log.e("rainsilkinfo", "GetCount function id=" + id);
         }
 
         @Override
@@ -275,11 +264,6 @@ public class Type_count_server extends Activity {
             data_to_send.add(new BasicNameValuePair("id", id));
             data_to_send.add(new BasicNameValuePair("count", count));
             data_to_send.add(new BasicNameValuePair("giftcount", giftcount));
-
-
-            Log.e("rainsilkinfo", "set id =" + id);
-            Log.e("rainsilkinfo", "set count =" + count);
-            Log.e("rainsilkinfo", "set giftcount =" + giftcount);
 
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -293,19 +277,10 @@ public class Type_count_server extends Activity {
                 HttpResponse httpResponse = client.execute(post);
                 HttpEntity entity = httpResponse.getEntity();
                 String result = EntityUtils.toString(entity);
-                Log.e("rainsilkinfo", "set count result =" + result);
 
                 JSONObject jsonObject = new JSONObject(result);
-
-                if (jsonObject.length() == 0) {
-                    Log.e("rainsilkinfo", "retunedContact = null;");
-                } else {
-                    Log.e("rainsilkinfo", "retunedContact =new count;");
-                }
-
             } catch (Exception e) {
-                Log.e("rainsilkinfo", "SetCount failed");
-                e.printStackTrace();
+                 e.printStackTrace();
             }
             return null;
         }

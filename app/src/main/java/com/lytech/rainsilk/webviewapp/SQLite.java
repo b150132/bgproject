@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 /**
  * Created by rainsilk on 2015/12/17.
@@ -82,13 +81,10 @@ public class SQLite extends SQLiteOpenHelper {
         {
             do{
                 a= cursor.getString(0);
-                Log.e("SQ", "a = " + a);
-                Log.e("SQ", "b = " + b);
+
                 if(a.equals(uname))
                 {
                     b=cursor.getString(1);
-                    Log.e("SQ", "a = " + a);
-                    Log.e("SQ", "b = " + b);
                     break;
                 }
             }

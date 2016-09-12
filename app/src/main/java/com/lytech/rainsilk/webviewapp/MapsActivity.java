@@ -177,8 +177,6 @@ public class MapsActivity extends FragmentActivity implements ConnectionCallback
                             Intent result = new Intent();
                             result.putExtra("lat", currentLocation.getLatitude());
                             result.putExtra("lng", currentLocation.getLongitude());
-                            Log.e("rainsilk", "lat=" + currentLocation.getLatitude());
-                            Log.e("rainsilk", "lng=" + currentLocation.getLongitude());
                             setResult(Activity.RESULT_OK, result);
                             finish();
                         }

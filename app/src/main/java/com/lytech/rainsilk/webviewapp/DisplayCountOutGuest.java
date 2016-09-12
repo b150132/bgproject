@@ -74,7 +74,6 @@ public class DisplayCountOutGuest extends Activity {
             String result = null;
             String outcount = String.valueOf(1000);
             result = DBConnector.executeCountOutQuery("contacts","count",outcount);
-            Log.e("rainsilk", "displayOutCount result=" + result);
 
                /*
                              SQL 結果有多筆資料時使用JSONArray
@@ -122,7 +121,7 @@ public class DisplayCountOutGuest extends Activity {
                 user_list.addView(tr);
             }
         } catch (Exception e) {
-            Log.e("log_tag", e.toString());
+
         }
     }
 
@@ -131,7 +130,6 @@ public class DisplayCountOutGuest extends Activity {
         serverRequests.setServiceDataInBackground(contact, new GetUserCallback() {
             @Override
             public void done(Contact returnedContact) {
-                Log.e("rainsilkinfo", "Setservice");
             }
         });
     }

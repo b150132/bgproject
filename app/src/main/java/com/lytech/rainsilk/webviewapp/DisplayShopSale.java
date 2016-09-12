@@ -34,7 +34,6 @@ public class DisplayShopSale extends Activity {
     Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            Log.e("rainsilk", "msg.what=" + msg.what);
 
             user_id = new TextView(DisplayShopSale.this);
             tr = new TableRow(DisplayShopSale.this);
@@ -77,8 +76,6 @@ public class DisplayShopSale extends Activity {
         public void run() {
             // 運行網路連線的程式
             Showinfo();
-            Log.e("rainsilk", "run!!!!!!!!!");
-
         }
     };
     public void onButtonClick(View view){

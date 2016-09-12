@@ -5,7 +5,6 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -124,7 +123,6 @@ public class DisplayBuyThing extends Activity {
     }
 
     void openDialog() {
-        Log.e("rainsilk","傳給店家"+sharetext);
         sharetext = sharetext + "\n" + "外送地址:"+guestaddr+"\n";
         String shareText = sharetext;//et_sharetext.getEditableText().toString();
         Intent intent = new Intent(Intent.ACTION_SEND);

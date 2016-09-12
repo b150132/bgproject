@@ -106,7 +106,7 @@ public class ShopMenu extends Activity {
                 }
                 if (addressList == null || addressList.isEmpty()) {
 //                    mTxtLocation.setText("找不到地址");
-                    Log.e("rainsilk", "mTxtLocation=" + "no address");
+
                 } else {
                     address = addressList.get(0);
 //                    float results[] = new float[1];

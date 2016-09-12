@@ -174,14 +174,11 @@ public class Type_count_car extends Activity {
                     edtxt_result.setFocusableInTouchMode(true);
                     edtxt_result.requestFocus();
                     edtxt_result.requestFocusFromTouch();
-                    Log.e("rainsilk", "edtxt request");
-
                 }
 
                 //如果字數達到4，取消自己焦點，隱藏虛擬鍵盤
                 if (edtxt_result.getText().toString().length() == 4) {
                     edtxt_result.clearFocus();
-                    Log.e("rainsilk", "edtxt clear");
                 }
             }
         };
@@ -207,10 +204,8 @@ public class Type_count_car extends Activity {
         if (v.getId() == R.id.btOK) {
             //GUEST ID
             memberID = etMember.getText().toString();
-            Log.e("rainsilk", "客人ID=" + memberID);
             //service count 客人付出之運輸點數
             servicecount = edtxt_result.getText().toString();
-            Log.e("rainsilk", "客人付出之運輸點數=" + servicecount);
             //取得登入驗證跟資料
             boolean authenticate = localDatabase.getUserLoggedIn();
 
@@ -259,7 +254,6 @@ public class Type_count_car extends Activity {
 
                         //印出的結果是 "Sat Apr 13 16:50:03 台北標準時間 2013"
                         String time = mDate.toString();
-                        Log.e("rainsilk time", "time=" + time);
                         //3 司機無打折
                         count = new Count("3", contact.id, memberID, res, memberCount, mygiftcount, res1, time);
 
@@ -269,7 +263,6 @@ public class Type_count_car extends Activity {
                         serverRequests.storeCountDetailInBackground(count, new GetUserCallback() {
                             @Override
                             public void done(Contact returnedContact) {
-                                Log.e("rainsilk car count ", "finish");
                                 finish();
                             }
                         });
@@ -283,9 +276,7 @@ public class Type_count_car extends Activity {
                     }
                 });
 
-
-            } else
-                Log.e("rainsilk", "auth fail");
+            }
         }
 
     }
@@ -303,7 +294,6 @@ public class Type_count_car extends Activity {
             this.cashcount=cashcount;
             this.giftcount = giftcount;
             this.carcount = carcount;
-            Log.e("rainsilkinfo", "點數異動Setcount");
         }
 
         @Override
@@ -314,11 +304,6 @@ public class Type_count_car extends Activity {
             data_to_send.add(new BasicNameValuePair("countnum",cashcount));
             data_to_send.add(new BasicNameValuePair("giftcount", giftcount));
             data_to_send.add(new BasicNameValuePair("carcount", carcount));
-
-            Log.e("rainsilkinfo", "set id =" + id);
-            Log.e("rainsilkinfo", "set cashcount =" + cashcount);
-            Log.e("rainsilkinfo", "set giftcount =" + giftcount);
-            Log.e("rainsilkinfo", "set carcount =" + carcount);
 
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -332,18 +317,10 @@ public class Type_count_car extends Activity {
                 HttpResponse httpResponse = client.execute(post);
                 HttpEntity entity = httpResponse.getEntity();
                 String result = EntityUtils.toString(entity);
-                Log.e("rainsilkinfo", "set count result =" + result);
 
                 JSONObject jsonObject = new JSONObject(result);
 
-                if (jsonObject.length() == 0) {
-                    Log.e("rainsilkinfo", "retunedContact = null;");
-                } else {
-                    Log.e("rainsilkinfo", "retunedContact =new count;");
-                }
-
             } catch (Exception e) {
-                Log.e("rainsilkinfo", "SetCount failed");
                 e.printStackTrace();
             }
             return null;

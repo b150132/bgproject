@@ -2,7 +2,6 @@ package com.lytech.rainsilk.webviewapp;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.util.Log;
 
 /**
  * Created by rainsilk on 2016/1/22.
@@ -36,7 +35,6 @@ public class LocalDatabase {
         spEditor.putString("Performance",contact.performance);
         spEditor.putString("Level",contact.level);
 
-        Log.e("rainsilkinfo","storeData");
         spEditor.commit();
     }
     public Contact getLoggedInUser()
@@ -71,11 +69,9 @@ public class LocalDatabase {
         SharedPreferences.Editor spEditor = localDatabase.edit();
         spEditor.putBoolean("loggedIn", loggedIn);
         spEditor.commit();
-        Log.e("rainsilkinfo", "setUserLoggedIn commit");
     }
     public boolean getUserLoggedIn()
     {
-        Log.e("rainsilkinfo", "getUserLoggedIn boolean");
         if(localDatabase.getBoolean("loggedIn",false))
             return true;
         else

@@ -107,19 +107,16 @@ public class Shop_1 extends Activity {
             int count1 = 0;
             for (EditText etx : etxs) {
                 goods[count1] = etx.getText().toString();
-                Log.v("EditText", count1 + "." + goods[count1]);
                 count1++;
             }
             int count2 = 0;
             for (EditText etxprice : etxprices) {
                 goodsprice[count2] = etxprice.getText().toString();
-                Log.v("EditText2", count2 + "." + goodsprice[count2]);
                 count2++;
             }
             int count3 = 0;
             for (EditText etxcount : etxcounts) {
                 goodscount[count3] = etxcount.getText().toString();
-                Log.v("EditText3", count3 + "." + goodscount[count3]);
                 count3++;
             }
 
@@ -153,12 +150,11 @@ public class Shop_1 extends Activity {
 
             for (int k = 0; k < shopCommodityNum; k++) {
                 commodity = new Commodity(goods[k], Integer.toString(k + 1), shopname, goodsprice[k], goodscount[k], pnamelist[k]);
-                Log.e("rainsilk", "commodity:" + goods[k] + " " + Integer.toString(k + 1) + " " + shopname + " " + goodsprice[k] + " " + goodscount[k] + " " + pnamelist[k]);
                 ServerRequests serverRequests = new ServerRequests(mCtx);
                 serverRequests.storeCommDetailInBackground(commodity, new GetUserCallback() {
                     @Override
                     public void done(Contact returnedContact) {
-                        Log.e("rainsilk", "commodity finish");
+
                     }
                 });
             }
@@ -266,7 +262,6 @@ public class Shop_1 extends Activity {
         public UploadImage(Bitmap image, String uname) {
             this.image = image;
             this.uname = uname;
-            Log.e("rainsilkinfo", "UploadImage function");
         }
 
         @Override
@@ -278,8 +273,6 @@ public class Shop_1 extends Activity {
             ArrayList<NameValuePair> dataToSend = new ArrayList<>();
             dataToSend.add(new BasicNameValuePair("uname", uname));
             dataToSend.add(new BasicNameValuePair("image", encodedImage));
-            Log.e("rainsilkinfo", "uname=" + uname);
-            //Log.e("rainsilkinfo", "encodedImage=" + encodedImage);
 
             HttpParams httpRequestParams = getHttpRequestParams();
 
@@ -290,11 +283,8 @@ public class Shop_1 extends Activity {
             try {
                 post.setEntity(new UrlEncodedFormEntity(dataToSend));
                 client.execute(post);
-                Log.e("rainsilkinfo", "save picture...");
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.e("rainsilkinfo", "save picture error..");
-                //Toast.makeText(getApplicationContext(), uname+"上傳失敗", Toast.LENGTH_SHORT).show();
             }
             return null;
         }

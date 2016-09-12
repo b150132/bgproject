@@ -72,8 +72,6 @@ public class Job_sendcar extends Activity {
             mTxtB.setText(getString(R.string.buytype_select) + parent.getSelectedItem().toString());
             Object item = parent.getItemAtPosition(position);
             String chooseItem = item.toString();
-            Log.e("rainsilk", "ITEM=" + chooseItem);
-
 //            String str1= "美食";
 //            String str2= "咖啡廳";
 //            String str3= "貨運";
@@ -167,8 +165,6 @@ public class Job_sendcar extends Activity {
 
 
                         Intent i = new Intent(Job_sendcar.this, Job_carinfo.class);
-                        Log.e("rainsilk", "item.getLatitude()=" + item.getLatitude());
-                        Log.e("rainsilk", "item.getLongitude()" + item.getLongitude());
                         i.putExtra("servicecode", ServiceCode); //項目
                         i.putExtra("lat", item.getLatitude()); //定位
                         i.putExtra("lng", item.getLongitude());
@@ -203,7 +199,6 @@ public class Job_sendcar extends Activity {
                     }
                     if (addressList == null || addressList.isEmpty()) {
                         mTxtLocation.setText("找不到地址");
-                        Log.e("rainsilk", "mTxtLocation=" + "no address");
                     } else {
                         address = addressList.get(0);
 
@@ -215,8 +210,6 @@ public class Job_sendcar extends Activity {
                         returnAddress = lstAddress.get(0).getAddressLine(0);
                         String distance = NumberFormat.getInstance().format(results[0]);
                         mTxtLocation.setText(returnAddress);
-                        //mTxtLocation.setText("距離" +placeName + distance + "公尺");
-                        Log.e("rainsilk", "mTxtLocation=" + distance + "m");
                     }
                 }
             }//END OF IF ISLOCATION
@@ -236,8 +229,6 @@ public class Job_sendcar extends Activity {
                     double lng = data.getDoubleExtra("lng", 0.0);
                     item.setLatitude(lat);
                     item.setLongitude(lng);
-                    Log.e("rainsilk", "car lat=" + lat);
-                    Log.e("rainsilk", "car lng=" + lng);
                     String vOut = Double.toString(lat);
                     String vOut2 = Double.toString(lng);
 
@@ -260,7 +251,7 @@ public class Job_sendcar extends Activity {
         serverRequests.setLocatDataInBackground(contact, new GetUserCallback() {
             @Override
             public void done(Contact returnedContact) {
-                Log.e("rainsilkinfo", "UPDATE");
+
             }
         });
     }
@@ -270,7 +261,7 @@ public class Job_sendcar extends Activity {
         serverRequests.setServiceDataInBackground(contact, new GetUserCallback() {
             @Override
             public void done(Contact returnedContact) {
-                Log.e("rainsilkinfo", "Setservice");
+
             }
         });
     }

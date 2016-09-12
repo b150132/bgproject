@@ -1,7 +1,5 @@
 package com.lytech.rainsilk.webviewapp;
 
-import android.util.Log;
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -35,7 +33,6 @@ public class DBConnector {
             ArrayList<NameValuePair> data_to_send = new ArrayList<>();
 
             data_to_send.add(new BasicNameValuePair("service", query_string));
-            Log.e("rainsilk", "query code(2 or 4) = " + query_string);
 
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -58,9 +55,8 @@ public class DBConnector {
             }
             inputStream.close();
             result = builder.toString();
-            Log.e("rainsilk", "DBconnect result" + result);
         } catch (Exception e) {
-            Log.e("log_tagDB", e.toString());
+
         }
 
         return result;
@@ -76,7 +72,6 @@ public class DBConnector {
             data_to_send.add(new BasicNameValuePair("page", page));
             data_to_send.add(new BasicNameValuePair("column", column));
             data_to_send.add(new BasicNameValuePair("value", value));
-            Log.e("rainsilk", "query code(2 or 4) = " + page);
 
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -99,9 +94,9 @@ public class DBConnector {
             }
             inputStream.close();
             result = builder.toString();
-            Log.e("rainsilk", "DBconnect result" + result);
+
         } catch (Exception e) {
-            Log.e("log_tagDB", e.toString());
+
         }
 
         return result;
@@ -115,7 +110,6 @@ public class DBConnector {
             ArrayList<NameValuePair> data_to_send = new ArrayList<>();
 
             data_to_send.add(new BasicNameValuePair("shop", query_shop));
-            Log.e("rainsilk", "query  = " + query_shop);
 
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -138,9 +132,8 @@ public class DBConnector {
             }
             inputStream.close();
             result = builder.toString();
-            Log.e("rainsilk", "DBconnect query comm result" + result);
         } catch (Exception e) {
-            Log.e("log_tagDB", e.toString());
+
         }
 
         return result;
@@ -154,7 +147,6 @@ public class DBConnector {
             ArrayList<NameValuePair> data_to_send = new ArrayList<>();
 
             data_to_send.add(new BasicNameValuePair("area", query_area));
-            Log.e("rainsilk", "query 跑馬燈 area 編號(0~30) = " + query_area);
 
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -177,9 +169,8 @@ public class DBConnector {
             }
             inputStream.close();
             result = builder.toString();
-            Log.e("rainsilk", "DBconnect query mar result" + result);
         } catch (Exception e) {
-            Log.e("log_tagDB", e.toString());
+
         }
 
         return result;
@@ -193,7 +184,6 @@ public class DBConnector {
             ArrayList<NameValuePair> data_to_send = new ArrayList<>();
 
             data_to_send.add(new BasicNameValuePair("area", query_area));
-            Log.e("rainsilk", "query area = " + query_area);
 
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -216,9 +206,8 @@ public class DBConnector {
             }
             inputStream.close();
             result = builder.toString();
-            Log.e("rainsilk", "DBconnect query shop result" + result);
         } catch (Exception e) {
-            Log.e("log_tagDB", e.toString());
+
         }
 
         return result;
@@ -232,7 +221,6 @@ public class DBConnector {
             ArrayList<NameValuePair> data_to_send = new ArrayList<>();
 
             data_to_send.add(new BasicNameValuePair("area", query_area));
-            Log.e("rainsilk", "query area = " + query_area);
 
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -255,9 +243,8 @@ public class DBConnector {
             }
             inputStream.close();
             result = builder.toString();
-            Log.e("rainsilk", "DBconnect query guest result" + result);
         } catch (Exception e) {
-            Log.e("log_tagDB", e.toString());
+
         }
 
         return result;

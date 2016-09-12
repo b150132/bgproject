@@ -94,19 +94,15 @@ public class SignUp extends Activity implements View.OnClickListener {
             if (ShopCheckBox.isChecked()) {
                 //CheckBox狀態 : 已勾選，顯示TextView
                 Toast.makeText(getApplicationContext(), "申請成為店家!", Toast.LENGTH_SHORT).show();
-                Log.e("rainsilk", "申請店家");
                 CarCheckBox.setEnabled(false);
             } else {
-                Log.e("rainsilk", "取消店家");
                 CarCheckBox.setEnabled(true);
             }
             if (CarCheckBox.isChecked()) {
                 //CheckBox狀態 : 已勾選，顯示TextView
                 Toast.makeText(getApplicationContext(), "申請成為司機!", Toast.LENGTH_SHORT).show();
-                Log.e("rainsilk", "申請司機");
                 ShopCheckBox.setEnabled(false);
             } else {
-                Log.e("rainsilk", "取消司機");
                 ShopCheckBox.setEnabled(true);
             }
         }
@@ -256,8 +252,6 @@ public class SignUp extends Activity implements View.OnClickListener {
             ArrayList<NameValuePair> dataToSend = new ArrayList<>();
             dataToSend.add(new BasicNameValuePair("uname", uname));
             dataToSend.add(new BasicNameValuePair("image", encodedImage));
-            Log.e("rainsilkinfo", "uname=" + uname);
-            //Log.e("rainsilkinfo", "encodedImage=" + encodedImage);
 
             HttpParams httpRequestParams = getHttpRequestParams();
 
@@ -268,10 +262,8 @@ public class SignUp extends Activity implements View.OnClickListener {
             try {
                 post.setEntity(new UrlEncodedFormEntity(dataToSend));
                 client.execute(post);
-                Log.e("rainsilkinfo", "save picture...");
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.e("rainsilkinfo", "save picture error..");
             }
             return null;
         }

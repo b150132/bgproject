@@ -55,12 +55,9 @@ public class MapsShowActivity extends FragmentActivity implements ConnectionCall
     Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            Log.e("rainsilk", "location msg.what=" + msg.what);
 
             shoplat[msg.what - 1] = Double.parseDouble(temp1);
             shoplng[msg.what - 1] = Double.parseDouble(temp2);
-
-            Log.e("rainsilk", "location=" + shoplat[msg.what - 1] + "," + shoplng[msg.what - 1]);
 
             MarkerOptions markerOptthread = new MarkerOptions();
             markerOptthread.position(new LatLng(shoplat[msg.what - 1], shoplng[msg.what - 1]));
@@ -117,8 +114,6 @@ public class MapsShowActivity extends FragmentActivity implements ConnectionCall
         public void run() {
             // 運行網路連線的程式
             Showshopinfo();
-            Log.e("riansilk", "run!!!!!!!!!");
-
         }
     };
 
@@ -221,8 +216,6 @@ public class MapsShowActivity extends FragmentActivity implements ConnectionCall
                             Intent result = new Intent();
                             result.putExtra("lat", currentLocation.getLatitude());
                             result.putExtra("lng", currentLocation.getLongitude());
-                            Log.e("rainsilk", "lat=" + currentLocation.getLatitude());
-                            Log.e("rainsilk", "lng=" + currentLocation.getLongitude());
                             setResult(Activity.RESULT_OK, result);
                             finish();
                         }

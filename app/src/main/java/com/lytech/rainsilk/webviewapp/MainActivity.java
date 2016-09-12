@@ -145,8 +145,7 @@ public class MainActivity extends ActionBarActivity {
                     builder.setPositiveButton("OK", null);
                     builder.show();
                 } else {
-                    Log.e("rainsilkinfo", "retunedContact !=null; go to display");
-                    //
+
                     localDatabase.storeData(returnedContact);
                     localDatabase.setUserLoggedIn(true);
 

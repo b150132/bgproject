@@ -137,6 +137,21 @@
         android:layout_height="wrap_content"
         android:text="申請使用本APP店家功能(提高您的商品曝光度!)"
         android:checked="false" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="上傳計程車照片"
+            android:id="@+id/textViewTexiPhoto" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120sp"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/TexiPhoto"
+            android:layout_gravity="right"
+            android:src="@drawable/uploadcommodity" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

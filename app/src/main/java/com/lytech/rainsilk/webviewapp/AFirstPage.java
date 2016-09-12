@@ -103,8 +103,6 @@ public class AFirstPage extends Activity {
     Handler mHandler1 = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            Log.e("rainsilk", "msg.what=" + msg.what);
-
             if (Marall != null)
                 Marall = Marall + " | " + MarName;
             else
@@ -114,7 +112,6 @@ public class AFirstPage extends Activity {
                 Marall = Marall.substring(Marall.length() - MarName.length(), Marall.length());
 
             tv.setText(Marall);
-            Log.e("rainsilk", "set跑馬燈文字為=" + Marall);
             tv.setSelected(true);
 
             super.handleMessage(msg);
@@ -256,8 +253,6 @@ public class AFirstPage extends Activity {
         public void run() {
             // 運行網路連線的程式
             ShowMar(Positon,1);
-            Log.e("rainsilk", "呼叫查詢跑馬燈!!!!!!!!!");
-
         }
     };
 
@@ -265,8 +260,6 @@ public class AFirstPage extends Activity {
         public void run() {
             // 運行網路連線的程式
             ShowMar(Positon,2);
-            Log.e("rainsilk", "呼叫查詢跑馬燈2!!!!!!!!!");
-
         }
     };
 
@@ -321,7 +314,6 @@ public class AFirstPage extends Activity {
                     if (Build.VERSION.SDK_INT >= 11)
                         getStatusBarHight();
                 } catch (Exception es) {
-                    Log.e("riansilk", "no support action  bar");
                     getStatusBarHight();
                 }
 
@@ -524,7 +516,6 @@ public class AFirstPage extends Activity {
                 }
                 if (addressList == null || addressList.isEmpty()) {
 //                    mTxtLocation.setText("找不到地址");
-                    Log.e("rainsilk", "mTxtLocation=" + "no address");
                 } else {
                     address = addressList.get(0);
 //                    float results[] = new float[1];
@@ -556,8 +547,7 @@ public class AFirstPage extends Activity {
                     e.printStackTrace();
                 }
                 if (addressList == null || addressList.isEmpty()) {
-//                    mTxtLocation.setText("找不到地址");
-                    Log.e("rainsilk", "mTxtLocation=" + "no address");
+                    //mTxtLocation.setText("找不到地址");
                 } else {
                     address = addressList.get(0);
 //                    float results[] = new float[1];
@@ -566,7 +556,6 @@ public class AFirstPage extends Activity {
                     intentMap.putExtra("title", "title");
 
                     startActivityForResult(intentMap, START_LOCATION);
-//                    Log.e("rainsilk", "mTxtLocation=" + distance +"m");
                 }
             }
         }
@@ -588,7 +577,7 @@ public class AFirstPage extends Activity {
                 }
                 if (addressList == null || addressList.isEmpty()) {
 //                    mTxtLocation.setText("找不到地址");
-                    Log.e("rainsilk", "mTxtLocation=" + "no address");
+
                 } else {
                     address = addressList.get(0);
 //                    float results[] = new float[1];
@@ -619,7 +608,7 @@ public class AFirstPage extends Activity {
                 }
                 if (addressList == null || addressList.isEmpty()) {
 //                    mTxtLocation.setText("找不到地址");
-                    Log.e("rainsilk", "mTxtLocation=" + "no address");
+
                 } else {
                     address = addressList.get(0);
 //                    float results[] = new float[1];
@@ -647,7 +636,7 @@ public class AFirstPage extends Activity {
                     //Self ID
                     boolean authenticate = localDatabase.getUserLoggedIn();
 
-                    if (authenticate) {
+
 
                         final Contact contact = localDatabase.getLoggedInUser();
                         //get 自己的id
@@ -672,8 +661,7 @@ public class AFirstPage extends Activity {
                             }
                         });
 
-                    } else
-                        Log.e("rainsilk", "auth fail");
+
 
 
                 }
@@ -685,7 +673,6 @@ public class AFirstPage extends Activity {
         }
         if (v.getId() == R.id.imgbtnCService) //客訴
         {
-            Log.e("rainsilk", "呼叫mail程序");
 //            //呼叫mail程序
 //            Uri uri = Uri.parse("mailto:xxx@abc.com");
 //            Intent it = new Intent(Intent.ACTION_SENDTO, uri);
@@ -735,37 +722,32 @@ public class AFirstPage extends Activity {
         if (resultCode == RESULT_OK) {
             // Scan App 回傳內容
             String result = data.getStringExtra("SCAN_RESULT");
-            Log.e("rainsilk", "QR code scan result=" + result);
+
 //            result = "shoporcar id:counttype:countnumber"; // 22: 2 :5 22號會員所發出的折扣點數5點
             String[] tokens = result.split(":");
             String[] shopinfo = new String[]{null, null, null};
             int tokencouter = 0;
             for (String token : tokens) {
                 System.out.println(token);
-                Log.e("rainsilk", "scan token=" + token);
                 shopinfo[tokencouter] = token;
-                Log.e("rsinsilk", "scan tokencounter=" + shopinfo[tokencouter]);
                 tokencouter++;
             }
 
             countnum = shopinfo[2]; //edtxt_result.getText().toString();
-            Log.e("rainsilk", "掃描點數=" + countnum);
             //點數種類
             counttype = shopinfo[1];
             //Shop or Car ID
             memberID = shopinfo[0];//etMember.getText().toString();
-            Log.e("rainsilk", "贈與shop or car ID=" + memberID);
             //Self ID
             boolean authenticate = localDatabase.getUserLoggedIn();
 
-            if (authenticate) {
+
                 //掃描成立: 扣商店或司機???點數 哪一種 加自己???點數?, ???=100
                 final Contact contact = localDatabase.getLoggedInUser();
                 //get 客人自己的點數
                 mycount = contact.getCount();
                 myGCount = contact.getGiftCount();
                 myCCount = contact.getCarCount();
-                Log.e("rainsilk", "原始my count=" + mycount+",gcount="+myGCount+",ccount="+myCCount);
 
                 ServerRequests serverRequests = new ServerRequests(this);
                 memberCount = serverRequests.doInBackground(contact, memberID, new GetUserCallback() {
@@ -775,7 +757,6 @@ public class AFirstPage extends Activity {
                         memberCount = contact.getCount();
                         memberGCount = contact.getGiftCount();
                         memberCCount = contact.getCarCount();
-                        Log.e("rainsilk", "原始shop or car count=" + memberCount+",gcount="+memberGCount+",ccount="+memberCCount);
 
                         int icounttype=Integer.parseInt(counttype);
                         switch (icounttype)
@@ -803,7 +784,6 @@ public class AFirstPage extends Activity {
                                 memberGCount = Integer.toString(Integer.parseInt(memberGCount) - Integer.parseInt(countnum));//(int) ((Integer.parseInt(servicecount)) * 0.9 + 0.5));
                                 break;
                             case 3: //運輸點數 未使用
-                                Log.e("rainsilk","掃描為運輸點數,功能未開放");
                                 break;
                         }
                         //SetCount Function 指定會員ID 寫入三種點數 若不變請填原值
@@ -821,7 +801,7 @@ public class AFirstPage extends Activity {
 
                         //印出的結果是 "Sat Apr 13 16:50:03 台北標準時間 2013"
                         String time = mDate.toString();
-                        Log.e("rainsilk time", "time=" + time);
+
                         //7 點數掃描贈點
                         count = new Count("7", contact.id, mycount, myGCount, myCCount, "null", "null", time);
                         mcount = new Count("7", memberID, memberCount, memberGCount, memberCCount, "null", "null", time);
@@ -832,8 +812,7 @@ public class AFirstPage extends Activity {
                         serverRequests.storeCountDetailInBackground(count, new GetUserCallback() {
                             @Override
                             public void done(Contact returnedContact) {
-                                Log.e("rainsilk count ", "掃描贈點 會員點數異動紀錄finish");
-                                finish();
+                              finish();
                             }
                         });
 
@@ -847,8 +826,7 @@ public class AFirstPage extends Activity {
 //                        });
                     }
                 });
-            } else
-                Log.e("rainsilk", "auth fail");
+
 
 
 //            text.setText( result );
@@ -869,7 +847,6 @@ public class AFirstPage extends Activity {
             this.cashcount=cashcount;
             this.giftcount = giftcount;
             this.carcount = carcount;
-            Log.e("rainsilkinfo", "點數異動Setcount");
         }
 
         @Override
@@ -880,11 +857,6 @@ public class AFirstPage extends Activity {
             data_to_send.add(new BasicNameValuePair("countnum",cashcount));
             data_to_send.add(new BasicNameValuePair("giftcount", giftcount));
             data_to_send.add(new BasicNameValuePair("carcount", carcount));
-
-            Log.e("rainsilkinfo", "set id =" + id);
-            Log.e("rainsilkinfo", "set cashcount =" + cashcount);
-            Log.e("rainsilkinfo", "set giftcount =" + giftcount);
-            Log.e("rainsilkinfo", "set carcount =" + carcount);
 
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -898,18 +870,7 @@ public class AFirstPage extends Activity {
                 HttpResponse httpResponse = client.execute(post);
                 HttpEntity entity = httpResponse.getEntity();
                 String result = EntityUtils.toString(entity);
-                Log.e("rainsilkinfo", "set count result =" + result);
-
-                JSONObject jsonObject = new JSONObject(result);
-
-                if (jsonObject.length() == 0) {
-                    Log.e("rainsilkinfo", "retunedContact = null;");
-                } else {
-                    Log.e("rainsilkinfo", "retunedContact =new count;");
-                }
-
             } catch (Exception e) {
-                Log.e("rainsilkinfo", "SetCount failed");
                 e.printStackTrace();
             }
             return null;
@@ -928,7 +889,6 @@ public class AFirstPage extends Activity {
 
         public SetCover(String shoporcarid) {
             this.shoporcarid = shoporcarid;
-            Log.e("rainsilkinfo", "來客數異動Setcover");
         }
 
         @Override
@@ -941,8 +901,6 @@ public class AFirstPage extends Activity {
             data_to_send.add(new BasicNameValuePair("keycolumn", "Memberid"));
             data_to_send.add(new BasicNameValuePair("keyvalue", shoporcarid));
 
-            Log.e("rainsilkinfo", "set shoporcarid =" + shoporcarid);
-
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
             HttpConnectionParams.setSoTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -954,19 +912,8 @@ public class AFirstPage extends Activity {
                 post.setEntity(new UrlEncodedFormEntity(data_to_send));
                 HttpResponse httpResponse = client.execute(post);
                 HttpEntity entity = httpResponse.getEntity();
-                String result = EntityUtils.toString(entity);
-                Log.e("rainsilkinfo", "update cover result =" + result);
-
-                JSONObject jsonObject = new JSONObject(result);
-
-                if (jsonObject.length() == 0) {
-                    Log.e("rainsilkinfo", "retunedcover = null;");
-                } else {
-                    Log.e("rainsilkinfo", "retunedcover =new cover;");
-                }
 
             } catch (Exception e) {
-                Log.e("rainsilkinfo", "SetCover failed");
                 e.printStackTrace();
             }
             return null;
@@ -983,15 +930,12 @@ public class AFirstPage extends Activity {
         @Override
         public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
             RegionName = parent.getSelectedItem().toString();
-            Log.e("rainsilk", "Region name:" + RegionName);
 
             //mTxtB.setText(getString(R.string.buytype_select)+parent.getSelectedItem().toString());
             Object item = parent.getItemAtPosition(position);
-            Log.e("rainsilk", "position=" + position);
             Positon = Integer.toString(position);
 
             String chooseItem = item.toString();
-            Log.e("rainsilk", "ITEM=" + chooseItem);
 
             //再次呼叫跑馬燈
             thread2 = new Thread(mutiThread2);

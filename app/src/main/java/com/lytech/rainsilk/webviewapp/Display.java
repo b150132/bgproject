@@ -46,10 +46,8 @@ public class Display extends Activity {
         super.onStart();
 
         if (authenticate() == true) {
-            Log.e("rainsilkinfo", "authenticate()==true;");
             displayContactDetails();
         } else {
-            Log.e("rainsilkinfo", "authenticate()==false;");
             Intent intent = new Intent(Display.this, MainActivity.class);
             startActivity(intent);
         }
@@ -82,7 +80,6 @@ public class Display extends Activity {
     public void onLogoutClick(View view) {
         localDatabase.cleanData();
         localDatabase.setUserLoggedIn(false);
-        Log.e("rainsilkinfo", "logout;");
         Intent intent = new Intent(Display.this, MainActivity.class);
         startActivity(intent);
     }

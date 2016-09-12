@@ -7,7 +7,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.DataSetObserver;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -133,7 +132,6 @@ public class ShopCart extends Activity implements View.OnClickListener, AdapterV
 
                 if (tag != null && tag instanceof Integer) { //解决问题：如何知道你点击的按钮是哪一个列表项中的，通过Tag的position
                     int position = (Integer) tag;
-                    Log.e("rainsilk", "加 position=" + position);
                     //更改集合的数据
                     int num = datas.get(position).getNum();
                     num++;
@@ -149,7 +147,7 @@ public class ShopCart extends Activity implements View.OnClickListener, AdapterV
                 // 获取 Adapter 中设置的 Tag
                 if (tag != null && tag instanceof Integer) {
                     int position = (Integer) tag;
-                    Log.e("rainsilk", "減 position=" + position);
+
                     //更改集合的数据
                     int num = datas.get(position).getNum();
                     int price = Integer.parseInt(cost[position].substring(0, cost[position].length() - 1));
@@ -194,12 +192,12 @@ public class ShopCart extends Activity implements View.OnClickListener, AdapterV
 
                         for (int k = 0; k < datas.size(); k++) {
                             commodity = new Commodity(Integer.toString(k+1) , ShopName, Integer.toString(pnum[k]));
-                            Log.e("rainsilk", "commodity-num:" +Integer.toString(k + 1) + " shopname: " + ShopName + " addnum: " +Integer.toString(pnum[k]));
+
                             ServerRequests serverRequests = new ServerRequests(mCtx);
                             serverRequests.storeCommSaleInBackground(commodity, new GetUserCallback() {
                                 @Override
                                 public void done(Contact returnedContact) {
-                                    Log.e("rainsilk", "commodity finish");
+
                                 }
                             });
                         }

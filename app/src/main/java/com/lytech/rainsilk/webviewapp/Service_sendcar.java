@@ -11,7 +11,6 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
@@ -78,9 +77,6 @@ public class Service_sendcar extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-
-
-        Log.e("rainsilk", "onResume");
     }
 
     @Override
@@ -96,7 +92,6 @@ public class Service_sendcar extends Activity {
         if (intent.getBooleanExtra("close_activity", false)) {
 
             //Toast.makeText(this,"有人叫車,結束....",Toast.LENGTH_LONG).show();
-            Log.e("rainsilk", "kill send car!!!!!!!!!!");
             finish();
             Intent i = new Intent(Service_sendcar.this, CheckLineFinish.class);
             i.putExtra("jobcode", ServiceCode);
@@ -115,7 +110,6 @@ public class Service_sendcar extends Activity {
         // 移除廣播接收元件
         if (IsBroadcast)
             unregisterReceiver(receiver);
-        Log.e("rainsilk", "onDestroy");
         super.onDestroy();
 
     }
@@ -127,7 +121,6 @@ public class Service_sendcar extends Activity {
             mTxtB.setText(getString(R.string.buytype_select) + parent.getSelectedItem().toString());
             Object item = parent.getItemAtPosition(position);
             String chooseItem = item.toString();
-            Log.e("rainsilk", "ITEM=" + chooseItem);
 
             switch (parent.getSelectedItem().toString()) {
                 case "":
@@ -237,7 +230,6 @@ public class Service_sendcar extends Activity {
                     }
                     if (addressList == null || addressList.isEmpty()) {
                         mTxtLocation.setText("找不到地址");
-                        Log.e("rainsilk", "mTxtLocation=" + "no address");
                     } else {
 
                         address = addressList.get(0);
@@ -255,8 +247,6 @@ public class Service_sendcar extends Activity {
                         returnAddress = lstAddress.get(0).getAddressLine(0);
                         String distance = NumberFormat.getInstance().format(results[0]);
                         mTxtLocation.setText(returnAddress);
-                        //mTxtLocation.setText("距離" +placeName + distance + "公尺");
-                        Log.e("rainsilk", "mTxtLocation=" + distance + "m");
                     }
                 }
             }//END OF IF ISLOCATION
@@ -278,8 +268,7 @@ public class Service_sendcar extends Activity {
                     double lng = data.getDoubleExtra("lng", 0.0);
                     item.setLatitude(lat);
                     item.setLongitude(lng);
-                    Log.e("rainsilk", "car lat=" + lat);
-                    Log.e("rainsilk", "car lng=" + lng);
+
                     String vOut = Double.toString(lat);
                     String vOut2 = Double.toString(lng);
 
@@ -303,7 +292,6 @@ public class Service_sendcar extends Activity {
         serverRequests.setLocatDataInBackground(contact, new GetUserCallback() {
             @Override
             public void done(Contact returnedContact) {
-                Log.e("rainsilkinfo", "UPDATE");
             }
         });
     }
@@ -313,7 +301,6 @@ public class Service_sendcar extends Activity {
         serverRequests.setServiceDataInBackground(contact, new GetUserCallback() {
             @Override
             public void done(Contact returnedContact) {
-                Log.e("rainsilkinfo", "userSetservice");
             }
         });
     }
